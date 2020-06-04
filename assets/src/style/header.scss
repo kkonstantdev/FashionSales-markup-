@@ -1,0 +1,107 @@
+.header {
+  padding: 25px 0;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+  }
+
+  &__link {
+    font-size: 22px;
+    color: $color-gray;
+    text-transform: uppercase;
+    font-family: $font-light;
+
+    &.active {
+      font-family: $font-medium;
+      color: #000;
+    }
+
+    &:nth-child(1) {
+      border-right: $border;
+      padding: 3px 50px 3px 0;  
+    }
+
+    &:nth-child(2) {
+      padding: 3px 0 3px 48px; 
+    }
+  }
+
+  .logo {
+    max-width: 263px;
+    width: 15vw;
+  }
+
+  &__user {
+    .login {
+      margin-right: 34px;
+    }
+
+    .icon {
+      font-size: 30px;
+    }
+  }
+
+}
+
+// =========== mobile burger ========
+.nav-burger {
+    display: none;
+    position: relative;
+    width: 22px;
+    height: 14px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+
+    @media only screen and (max-width : 767px) {
+        display: block;
+    }
+}
+
+.nav-burger span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #292929;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.nav-burger span:nth-child(1) {
+    top: 0px;
+    transform-origin: left center;
+}
+
+.nav-burger span:nth-child(2) {
+    top: 5px;
+    transform-origin: left center;
+}
+
+.nav-burger span:nth-child(3) {
+    top: 10px;
+    transform-origin: left center;
+}
+
+.nav-burger.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 2px;
+}
+
+.nav-burger.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+.nav-burger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 15px;
+    left: 2px;
+}

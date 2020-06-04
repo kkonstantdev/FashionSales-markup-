@@ -1,0 +1,334 @@
+html, body{
+  height: 100%;
+} 
+
+body {
+  line-height: 1.4;
+  font-family: $font-main;
+  background-color: $body-color;
+  color: #000;
+}
+
+a {
+  color: #000;
+  font-family: $font-bold;
+}
+
+h2 {
+  font-size: 45px;
+  line-height: 1;
+  font-family: $font-main;
+  text-transform: uppercase;
+}
+
+
+// ======= Flex-clases =========
+.d-flex {
+  display: flex;
+}
+
+.d-column {
+  flex-direction: column;
+}
+
+.j-content-between {
+  justify-content: space-between;
+}
+
+.j-content-around {
+  justify-content: space-around;
+}
+
+.j-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.f-wrapp {
+  flex-wrap: wrap;
+}
+
+// ========== footer-down =======
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+// =========== global styles =======
+.main {
+  padding: 46px 0;
+}
+
+.container-main {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.row-wrap {
+  display: flex;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.color-red {
+  background-color: $color-red;
+}
+
+.color-yellow {
+  background-color: $color-yellow;
+}
+
+// ======== filter =======
+.filter {
+  padding: 20px 0 0;
+  border-top: $border;
+  border-bottom: $border;
+
+  &-box {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  &__item {
+    height: 50px;
+    padding: 0 25px;
+    margin: 0 20px 20px 0;
+    text-align: center;
+    color: $color-gray;   
+    border: $border;
+    border-radius: $radius;
+    cursor: pointer;
+
+    &.active {
+      color: #000;
+
+      .icon {
+        display: block; 
+      }
+    }
+  }
+
+  &-title {
+    font-family: $font-light;
+    font-size: 30px;
+    line-height: 1;  
+    text-transform: lowercase;
+  }
+
+  .icon {
+    width: 12px;
+    height: 18px;  
+    margin-left: 12px;  
+    display: none;  
+  }
+}
+
+// ========= search =========
+.search {
+  position: relative;
+  width: 292px; 
+  margin-right: 60px;
+  border: $border;
+  border-radius: $radius;
+  min-height: 50px;
+
+  input[type="search"] {
+    height: 50px;
+    padding: 0 40px 0 30px;
+    border: none;
+    border-radius: $radius;
+    text-transform: lowercase;
+    color: #000;
+    font-size: 30px; 
+    outline: none; 
+    -webkit-appearance: none; 
+    width: 100%; 
+    vertical-align: middle;
+
+    &::-webkit-input-placeholder { color: $color-gray; }
+    &::-moz-placeholder          { color: $color-gray; } 
+    &:-ms-input-placeholder      { color: $color-gray; } 
+  }
+
+  &-icon {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    font-size: 25px;
+    color: $color-gray;
+    background-color: #fff;
+    cursor: pointer;
+  }
+}
+
+// ======= checkbox radio button =====
+.radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 7px;
+
+  & + label {
+    position: relative;
+    margin-bottom: 17px;
+    padding: 0 0 0 40px;
+    font-size: 28px;
+    line-height: 1;
+    font-family: $font-light;
+    color: $color-gray;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      border: 1px solid $color-gray;
+      border-radius: 50%;
+      background: #FFF;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 11px;
+      left: 4px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #000;
+      opacity: 0;
+      transition: .2s;
+    }
+  }
+
+  &:checked + label {
+    font-family: $font-main;
+    color: #000;
+
+    &:before {
+      border: 1px solid #000;
+    }
+
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+.checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 7px;
+
+  & + label {
+    position: relative;
+    margin-bottom: 17px;
+    padding: 0 0 0 40px;
+    font-size: 28px;
+    line-height: 1;
+    font-family: $font-light;
+    color: $color-gray;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      border: 1px solid $color-gray;
+      border-radius: 50%;
+      background: #FFF;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 11px;
+      left: 4px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #000;
+      opacity: 0;
+      transition: .2s;
+    }
+  }
+
+  &:checked + label {
+    font-family: $font-main;
+    color: #000;
+
+    &:before {
+      border: 1px solid #000;
+    }
+
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+// ========= btn ========
+.btn {
+  position: relative;
+  display: block;
+  text-align: center;
+  height: 50px;
+  padding:  0 15px;
+  line-height: 50px;
+  font-family: $font-main;
+  border-radius: $radius;
+
+  &--black {
+    color: #fff;
+    font-size: 24px;
+    background-color: #000;
+  }
+
+  &--arrow {
+    &:before {
+      position: absolute;
+      content: "";
+      right: 20px;
+      top: 50%; 
+      transform: rotate(-45deg) translateY(-50%);
+      width: 4px;
+      height: 4px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 3px;
+    }
+  }
+}
+
