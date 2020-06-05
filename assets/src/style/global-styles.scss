@@ -71,14 +71,14 @@ h2 {
 }
 
 // =========== global styles =======
-.main {
-  padding: 46px 0;
-}
-
 .container-main {
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 25px;
+}
+
+.main {
+  padding: 30px 0;
 }
 
 .row-wrap {
@@ -100,7 +100,7 @@ h2 {
 
 // ======== filter =======
 .filter {
-  padding: 20px 0 0;
+  padding: 15px 0 0;
   border-top: $border;
   border-bottom: $border;
 
@@ -110,9 +110,9 @@ h2 {
   }
 
   &__item {
-    height: 50px;
-    padding: 0 25px;
-    margin: 0 20px 20px 0;
+    height: 33px;
+    padding: 0 17px 3px;
+    margin: 0 15px 15px 0;
     text-align: center;
     color: $color-gray;   
     border: $border;
@@ -130,36 +130,40 @@ h2 {
 
   &-title {
     font-family: $font-light;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 1;  
     text-transform: lowercase;
   }
 
   .icon {
-    width: 12px;
-    height: 18px;  
-    margin-left: 12px;  
-    display: none;  
+    width: 8px;
+    height: 4px;  
+    margin-left: 8px;  
+    display: none; 
+
+    img {
+      display: block; 
+    } 
   }
 }
 
 // ========= search =========
 .search {
   position: relative;
-  width: 292px; 
-  margin-right: 60px;
+  width: 130px; 
+  margin-right: 27px;
   border: $border;
   border-radius: $radius;
-  min-height: 50px;
+  min-height: 22px;
 
   input[type="search"] {
-    height: 50px;
-    padding: 0 40px 0 30px;
+    height: 22px;
+    padding: 0 18px 0 13px;
     border: none;
     border-radius: $radius;
     text-transform: lowercase;
     color: #000;
-    font-size: 30px; 
+    font-size: 13px; 
     outline: none; 
     -webkit-appearance: none; 
     width: 100%; 
@@ -173,12 +177,12 @@ h2 {
   &-icon {
     position: absolute;
     top: 50%;
-    right: 5px;
+    right: 3px;
     transform: translateY(-50%);
-    width: 60px;
-    height: 30px;
+    width: 27px;
+    height: 13px;
     text-align: center;
-    font-size: 25px;
+    font-size: 12px;
     color: $color-gray;
     background-color: #fff;
     cursor: pointer;
@@ -186,73 +190,18 @@ h2 {
 }
 
 // ======= checkbox radio button =====
-.radio {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-  margin: 10px 0 0 7px;
-
-  & + label {
-    position: relative;
-    margin-bottom: 17px;
-    padding: 0 0 0 40px;
-    font-size: 28px;
-    line-height: 1;
-    font-family: $font-light;
-    color: $color-gray;
-    cursor: pointer;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 6px;
-      left: 0;
-      width: 16px;
-      height: 16px;
-      border: 1px solid $color-gray;
-      border-radius: 50%;
-      background: #FFF;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      top: 11px;
-      left: 4px;
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: #000;
-      opacity: 0;
-      transition: .2s;
-    }
-  }
-
-  &:checked + label {
-    font-family: $font-main;
-    color: #000;
-
-    &:before {
-      border: 1px solid #000;
-    }
-
-    &:after {
-      opacity: 1;
-    }
-  }
-}
-
+.radio,
 .checkbox {
   position: absolute;
   z-index: -1;
   opacity: 0;
-  margin: 10px 0 0 7px;
+  margin: 7px 0 0 5px;
 
   & + label {
     position: relative;
-    margin-bottom: 17px;
-    padding: 0 0 0 40px;
-    font-size: 28px;
+    margin-bottom: 11px;
+    padding: 0 0 0 27px;
+    font-size: 18px;
     line-height: 1;
     font-family: $font-light;
     color: $color-gray;
@@ -261,10 +210,10 @@ h2 {
     &:before {
       content: '';
       position: absolute;
-      top: 6px;
+      top: 4px;
       left: 0;
-      width: 16px;
-      height: 16px;
+      width: 10px;
+      height: 10px;
       border: 1px solid $color-gray;
       border-radius: 50%;
       background: #FFF;
@@ -273,10 +222,10 @@ h2 {
     &:after {
       content: '';
       position: absolute;
-      top: 11px;
-      left: 4px;
-      width: 9px;
-      height: 9px;
+      top: 7px;
+      left: 3px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: #000;
       opacity: 0;
@@ -303,15 +252,15 @@ h2 {
   position: relative;
   display: block;
   text-align: center;
-  height: 50px;
-  padding:  0 15px;
-  line-height: 50px;
+  height: 33px;
+  padding:  0 10px;
+  line-height: 33px;
   font-family: $font-main;
   border-radius: $radius;
 
   &--black {
     color: #fff;
-    font-size: 24px;
+    font-size: 16px;
     background-color: #000;
   }
 
@@ -319,11 +268,11 @@ h2 {
     &:before {
       position: absolute;
       content: "";
-      right: 20px;
+      right: 13px;
       top: 50%; 
       transform: rotate(-45deg) translateY(-50%);
-      width: 4px;
-      height: 4px;
+      width: 2px;
+      height: 2px;
       border: solid #fff;
       border-width: 0 2px 2px 0;
       display: inline-block;

@@ -1,19 +1,19 @@
 // ========= sidebar ==========
 .sidebar {
-	width: 300px;
+	width: 200px;
 
 	&-title {
-		width: 286px;
+		width: 190px;
 		font-family: $font-medium;
 		color: #000;
-		margin-bottom: 25px;
-		padding-bottom: 8px;
-		font-size: 32px;
+		margin-bottom: 17px;
+		padding-bottom: 5px;
+		font-size: 21px;
 		border-bottom: $border;
 	}
 
 	&-list {
-		margin-bottom: 25px;
+		margin-bottom: 17px;
 	}
 
 	.acordeon {
@@ -27,11 +27,11 @@
 				&:before {
 					position: absolute;
 					content: "";
-					right: 30px;
+					right: 20px;
 					top: 50%; 
 					transform: rotate(45deg) translateY(-50%);
-					width: 4px;
-				    height: 4px;
+					width: 2px;
+				    height: 2px;
 				    border: solid #000;
 				    border-width: 0 2px 2px 0;
 				    display: inline-block;
@@ -40,7 +40,6 @@
 			}
 
 			.ac-child {
-				margin-top: -1px;
 				height: 0px;
 				overflow: hidden;
 				transition: .2s;
@@ -48,7 +47,7 @@
 
 			&.active {
 				.ac-parent:before {
-					right: 22px;
+					right: 15px;
 					transform: rotate(-135deg) translateY(-50%);
 				}
 				.ac-child {
@@ -60,92 +59,88 @@
 	}
 
 	.search {
-		width: 286px;
-		margin-bottom: 20px;
+		width: 190px;
+		margin-bottom: 13px;
 
 		input[type=search] {
-			height: 44px;
-			padding: 0 30px 0 20px;
-			font-size: 26px;
+			height: 30px;
+			padding: 0 20px 0 13px;
+			font-size: 17px;
 
 		}
 
 		&-icon {
-			font-size: 20px;
+			font-size: 13px;
 		}
 	}
 
 	.btn {
-		width: 286px;
+		width: 190px;
 	}
 }
 
 // ========= product ========
 .product {
-	    width: calc(100% - 300px);
+	    width: calc(100% - 200px);
 
 	&__item {
 		position: relative;
-		width: 47%;
-		margin: 0 0 3% 3%;
+		width: 30%;
+		margin: 0 0 2.5% 2.5%;
 
-		@media (min-width: 1920px) {
-			width: 30%;
-		}
+		// @media (min-width: 1920px) {
+		// 	width: 30%;
+		// }
 	}
 
 	&-preview {
-		width: 25%;
-		padding-top: 40px;
+		width: 30%;
+		padding-top: 27px;
 	}
 
 	&-img {
 		position: relative;
-		width: 75%;
+		width: 70%;
 
 		.discount {
 			position: absolute;
-			top: -10px;
-		    left: -10px;
-		    padding: 5px 19px;
+			top: -7px;
+		    left: -7px;
+		    padding: 5px 12px;
 		    color: #fff;
-		    font-size: 22px;
+		    font-size: 15px;
 		    border-radius: 8px;      
 		}
 	}
 
 	&-desc {
 		position: absolute;
-		bottom: -5px;
-		width: 278px;
-
-		@media (min-width: 1920px) {
-			width: 63%;
-		}
+		bottom: -3px;
 	}
 
 	&-title {
 		font-family: $font-bold;
-		font-size: 28px;
+		font-size: 23px;
 		text-transform: uppercase;
 	}
 
 	&-filter {
-		font-size: 31px;
+		width: 200px;	
+		margin: 0 auto 4%;
+		font-size: 21px;
 		color: $color-gray-dark;
 		font-family: $font-light;
-		margin-bottom: 15px;
 	}
 
 	.price {
-		margin-bottom: 15px;
+		margin-bottom: 4%;
 
 		&__item {
-			font-size: 39px;
+			font-size: 26px;
 			font-family: $font-bold;
 
 			&-hot {
-				margin-left: 5px;
+				margin-left: 3px;
 				color: $color-red;
 			}
 		}
@@ -157,10 +152,10 @@
 				position: absolute;
 				content: "";
 				width: 103%;
-				height: 2px;
+				height: 1px;
 				top: 50%;
 				transform: translateY(-50%);
-				margin-top: 3px;
+				margin-top: 2px;
 				background-color: #000;
 			}
 		}
@@ -170,24 +165,24 @@
 		&-link {
 			text-align: center;
 			display: block;
-			padding: 0 10px;
-			height: 56px;
-			margin-right: 15px;
+			padding: 0 15px;
+			height: 37px;
+			margin-right: 10px;
 			background-color: #fff;
 			border: $border;
 			border-radius: $radius;
-			font-size: 16px;
+			font-size: 17px;
 			font-family: $font-main;
 			color: #696969;
-			line-height: 56px;
+			line-height: 37px;
 			text-transform: uppercase;
 
 			.icon {
 				display: inline-block;
 				vertical-align: middle;
-				width: 16px;
+				width: 17px;
 				height: 20px;
-				margin-left: 5px;
+				margin-left: 3px;
 
 				img {
 					display: block;
@@ -197,14 +192,14 @@
 	}
 
 	&-star .icon {
-		width: 56px;
-		height: 56px;
+		width: 37px;
+		height: 37px;
 		background-color: #fff;
 		border: $border;
 		border-radius: $radius;
-		font-size: 25px;
+		font-size: 17px;
 		color: #696969;
-		line-height: 56px;
+		line-height: 37px;
 		cursor: pointer;
 	}
 }
