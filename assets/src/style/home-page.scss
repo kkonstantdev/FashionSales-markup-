@@ -1,6 +1,37 @@
+.home {
+	.login {
+		display: none;
+	}
+}
+
 // ========= sidebar ==========
 .sidebar {
-	width: 200px;
+	position: fixed;
+	background-color: #fff;
+	top: 0;
+	width: 100%;
+	height: calc(100vh - 53px);
+	padding: 15px;
+	z-index: 1;
+	overflow-y: auto;
+	display: none;
+
+	@media (min-width: 768px) {
+		position: static;
+        display: block;
+        width: 200px;
+        height: auto;
+        overflow: visible;
+        padding: 0;
+    }
+
+    &-box {
+    	padding: 0 15px;
+
+    	@media (min-width: 768px) {
+			padding: 0;
+	    }
+    }
 
 	&-title {
 		width: 190px;
@@ -28,7 +59,7 @@
 					position: absolute;
 					content: "";
 					right: 20px;
-					top: 50%; 
+					top: 35%; 
 					transform: rotate(45deg) translateY(-50%);
 					width: 2px;
 				    height: 2px;
@@ -64,7 +95,7 @@
 
 		input[type=search] {
 			height: 30px;
-			padding: 0 20px 0 13px;
+			padding-bottom: 0;
 			font-size: 17px;
 
 		}
@@ -75,27 +106,62 @@
 	}
 
 	.btn {
-		width: 190px;
+		width: 100%;
+
+		@media (min-width: 768px) {
+			width: 190px;
+	    }
+	}
+
+	// ============ mobile open ======
+	&.js--open {
+		display: block;
+	}
+
+	&-wrap {
+		position: relative;
+	}
+
+	.close-icon {
+		position: absolute;
+		right: 10px;
+		width: 16px;
+		height: 16px;
+		cursor: pointer;
 	}
 }
 
 // ========= product ========
 .product {
-	    width: calc(100% - 200px);
+	    width: 100%;
+
+	    @media (min-width: 768px) {
+			width: calc(100% - 200px);
+		}
 
 	&__item {
 		position: relative;
-		width: 31%;
-		margin: 0 0 2% 2%;
+		width: 100%;
+		margin-bottom: 45px;
+
+		@media (min-width: 576px) {
+			width: 48%;
+			margin: 0 0 3% 2%;
+		}
+
+		@media (min-width: 992px) {
+			width: 31.3%;
+			margin-bottom: 2%;
+		}
 	}
 
 	&-preview {
-		width: 30%;
-		padding-top: 5%;
+		width: 37%;
+		padding-top: 8%;
 
 		.img-box {
-    		width: 66%;
-    		margin: 0 23px 0 auto;
+    		width: 80%;
+    		margin: 0 6% 0 auto;
     	}
 	}
 
@@ -107,30 +173,56 @@
 			position: absolute;
 			top: -7px;
 		    left: -7px;
-		    padding: 5px 12px;
+		    padding: 3px 8px;
 		    color: #fff;
-		    font-size: 15px;
-		    border-radius: 8px;      
+		    font-size: 12px;
+		    border-radius: 8px;
+
+		    @media (min-width: 1200px) {
+				padding: 5px 12px;
+			    font-size: 15px;
+			}      
 		}
 	}
 
 	&-desc {
 		position: absolute;
 		bottom: -3px;
+		left: 15px;
+
+		@media (min-width: 576px) {
+			left: 0;
+		}
 
 		&__content {
-			width: 55%;
+			width: 66%;
+
+			@media (min-width: 992px) {
+				width: 60%;
+			}
+
+			@media (min-width: 1200px) {
+				width: 55%;
+			}
 
 			@media (min-width: 1440px) {
-				width: 76%;
+				width: 73%;
 			}
 		}	
 	}
 
 	&-title {
 		font-family: $font-bold;
-		font-size: 17px;
+		font-size: 18px;
 		text-transform: uppercase;
+
+		@media (min-width: 576px) {
+			font-size: 14px;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 17px;
+		}
 
 		@media (min-width: 1440px) {
 			font-size: 22px;
@@ -139,9 +231,17 @@
 
 	&-filter {
 		margin: 0 auto 4%;
-		font-size: 18px;
+		font-size: 16px;
 		color: $color-gray-dark;
 		font-family: $font-light;
+
+		@media (min-width: 576px) {
+			font-size: 14px;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 18px;
+		}
 
 		@media (min-width: 1440px) {
 			font-size: 21px;
@@ -154,6 +254,14 @@
 		&__item {
 			font-size: 20px;
 			font-family: $font-bold;
+
+			@media (min-width: 576px) {
+				font-size: 17px;
+			}
+
+			@media (min-width: 1200px) {
+				font-size: 20px;
+			}
 
 			@media (min-width: 1440px) {
 				font-size: 26px;
@@ -191,16 +299,20 @@
 			background-color: #fff;
 			border: $border;
 			border-radius: $radius;
-			font-size: 14px;
+			font-size: 12px;
 			font-family: $font-main;
 			color: #696969;
 			line-height: 30px;
 			text-transform: uppercase;
 
+			@media (min-width: 1200px) {
+				font-size: 14px;
+			}
+
 			@media (min-width: 1440px) {
 				padding: 0 15px;
 				height: 37px;
-				font-size: 17px;
+				font-size: 15px;
 				line-height: 37px;
 			}
 

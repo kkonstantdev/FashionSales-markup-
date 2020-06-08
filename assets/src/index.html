@@ -2,6 +2,16 @@
             <div class="filter">     
                 <div class="container-main">
                     <div class="filter-box d-flex align-items-center">
+                        <div class="filter__item--parent filter__item d-flex align-items-center">
+                            <div class="icon">
+                                <div class="line-wrap">
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+                            <div class="filter-title">filter</div>
+                        </div>
                         <div class="filter__item d-flex align-items-center active">
                             <div class="filter-title">jackets</div>
                             <div class="icon"><img src="img/icons/close.svg" alt="icon img" /></div>
@@ -27,52 +37,55 @@
                 <main class="main">
                     <div class="row-wrap"> 
                         <sidebar class="sidebar">
-                            <div class="sidebar-box"> 
-                                <div class="sidebar-title">Sort by</div>
-                                <div class="sidebar-list d-flex d-column">
-                                    <input type="radio" name="radio" class="radio" id="radio1" checked />
-                                    <label for="radio1">Price: high to low</label>
-                                    <input type="radio" name="radio" class="radio" id="radio2" />
-                                    <label for="radio2">Price: high to low</label>
-                                    <input type="radio" name="radio" class="radio" id="radio3" />
-                                    <label for="radio3">Price: high to low</label>
-                                    <input type="radio" name="radio" class="radio" id="radio4" />
-                                    <label for="radio4">Price: high to low</label>
-                                </div>
-                            </div>
-                            <div class="sidebar-box acordeon-box active"> 
-                                <div class="sidebar-title ac-parent">Category</div>
-                                <div class="sidebar-list d-flex d-column ac-child">
-                                    <input type="checkbox" class="checkbox" id="checkbox1" />
-                                    <label for="checkbox1">Price: high to low</label>
-                                    <input type="checkbox" class="checkbox" id="checkbox2" />
-                                    <label for="checkbox2">Price: high to low</label>
-                                    <input type="checkbox" class="checkbox" id="checkbox3" />
-                                    <label for="checkbox3">Price: high to low</label>
-                                    <input type="checkbox" class="checkbox" id="checkbox4" />
-                                    <label for="checkbox4">Price: high to low</label>
-                                </div>
-                            </div>
-                            <div class="sidebar-box acordeon-box active"> 
-                                <div class="sidebar-title ac-parent">Designers</div>
-                                <div class="sidebar-list d-flex d-column ac-child">
-                                    <div class="search">
-                                        <input type="search" placeholder="Search">
-                                        <span class="search-icon">
-                                            <i class="fa fa-search" aria-hidden="true"></i>
-                                        </span>
+                            <div class="sidebar-wrap">
+                                <div class="close-icon hidden-tablet"><img src="img/icons/close.svg" alt="icon img" /></div> 
+                                <div class="sidebar-box"> 
+                                    <div class="sidebar-title">Sort by</div>
+                                    <div class="sidebar-list d-flex d-column">
+                                        <input type="radio" name="radio" class="radio" id="radio1" checked />
+                                        <label for="radio1">Price: high to low</label>
+                                        <input type="radio" name="radio" class="radio" id="radio2" />
+                                        <label for="radio2">Price: high to low</label>
+                                        <input type="radio" name="radio" class="radio" id="radio3" />
+                                        <label for="radio3">Price: high to low</label>
+                                        <input type="radio" name="radio" class="radio" id="radio4" />
+                                        <label for="radio4">Price: high to low</label>
                                     </div>
-                                    <input type="checkbox" class="checkbox" id="checkbox5" />
-                                    <label for="checkbox5">Price: high to low</label>
-                                    <input type="checkbox" class="checkbox" id="checkbox6" />
-                                    <label for="checkbox6">Price: high to low</label>
-                                    <input type="checkbox" class="checkbox" id="checkbox7" />
-                                    <label for="checkbox7">Price: high to low</label>
-                                    <input type="checkbox" class="checkbox" id="checkbox8" />
-                                    <label for="checkbox8">Price: high to low</label>
                                 </div>
-                            </div>
-                            <a href="#" class="btn btn--black btn--arrow">Show 503 items</a> 
+                                <div class="sidebar-box acordeon-box active"> 
+                                    <div class="sidebar-title ac-parent">Category</div>
+                                    <div class="sidebar-list d-flex d-column ac-child">
+                                        <input type="checkbox" class="checkbox" id="checkbox1" />
+                                        <label for="checkbox1">Price: high to low</label>
+                                        <input type="checkbox" class="checkbox" id="checkbox2" />
+                                        <label for="checkbox2">Price: high to low</label>
+                                        <input type="checkbox" class="checkbox" id="checkbox3" />
+                                        <label for="checkbox3">Price: high to low</label>
+                                        <input type="checkbox" class="checkbox" id="checkbox4" />
+                                        <label for="checkbox4">Price: high to low</label>
+                                    </div>
+                                </div>
+                                <div class="sidebar-box acordeon-box active"> 
+                                    <div class="sidebar-title ac-parent">Designers</div>
+                                    <div class="sidebar-list d-flex d-column ac-child">
+                                        <div class="search">
+                                            <input type="search" placeholder="Search">
+                                            <span class="search-icon">
+                                                <i class="fa fa-search" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <input type="checkbox" class="checkbox" id="checkbox5" />
+                                        <label for="checkbox5">Price: high to low</label>
+                                        <input type="checkbox" class="checkbox" id="checkbox6" />
+                                        <label for="checkbox6">Price: high to low</label>
+                                        <input type="checkbox" class="checkbox" id="checkbox7" />
+                                        <label for="checkbox7">Price: high to low</label>
+                                        <input type="checkbox" class="checkbox" id="checkbox8" />
+                                        <label for="checkbox8">Price: high to low</label>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn--black btn--arrow">Show 503 items</a>
+                            </div> 
                         </sidebar>  
                         <section class="product">
                             <div class="product-wrap">

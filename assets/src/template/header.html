@@ -7,7 +7,7 @@
 <script src="https://kit.fontawesome.com/afc99787a6.js"></script>
 <title>Home page</title>
 </head>
-<body>
+<body class="home">
     <div class="wrapper">
         <div class="content"> 
             
@@ -15,14 +15,25 @@
              	<header class="header">
                     <div class="header__wrap">
                         <div class="header-left">
-                            <a href="#" class="header__link active">Men</a>
-                            <a href="#" class="header__link">Women</a>              
-                        </div>
-
-                        <div class="logo">
-                            <a href="#">
-                                <img src="img/logo.png" alt="logo img"/>
+                            <a href="#" class="header__link active">
+                                <span>Men</span>
                             </a>
+                            <a href="#" class="header__link">
+                                <span>Women</span>
+                            </a>
+                            <span class="account-mobile hidden-tablet">
+                                <a href="#" class="header__link">
+                                    <span>My account</span>
+                                </a>
+                            </span>              
+                        </div>
+                        
+                        <div class="logo-wrap"> 
+                            <div class="logo">
+                                <a href="#">
+                                    <img src="img/logo.png" alt="logo img"/>
+                                </a>
+                            </div>
                         </div>
                    
                         <div class="header-right d-flex align-items-center">

@@ -1,41 +1,110 @@
 .header {
-  padding: 17px 0;
+  @media (min-width: 768px) {
+    padding: 17px 0;
+  }
 
   &__wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 16px;
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 16px;
+    }
   }
 
   &-left {
-    width: 295px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-top: $border;
+    border-bottom: $border;
+
+    @media (min-width: 768px) {
+      display: block;
+      width: 295px;
+      margin-bottom: 0;
+      padding: 0;
+      border: none;
+    }
+  }
+
+  &-right {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: flex-end;
+      width: 295px;
+    }
   }
 
   &__link {
-    font-size: 15px;
-    color: $color-gray;
+    display: inline-block;
+    width: 32.7vw;
+    padding: 3px 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #000;
     text-transform: uppercase;
-    font-family: $font-light;
+    font-family: $font-medium;
+    border-right: $border;
+
+    @media (min-width: 768px) {
+        width: auto;
+        padding: 3px 33px 3px 0;
+        font-size: 15px;
+        font-family: $font-light;
+        color: $color-gray;
+    } 
 
     &.active {
       font-family: $font-medium;
       color: #000;
-    }
 
-    &:nth-child(1) {
-      border-right: $border;
-      padding: 3px 33px 3px 0;  
+      span{
+         position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          top: 50%;
+          left: -10px;
+          transform: translateY(-50%);
+          min-width: 3px;
+          min-height: 3px;
+          background-color: #000;
+          border-radius: 50%;
+
+          @media (min-width: 768px) {
+            display: none;
+          }
+        }
+      }
     }
 
     &:nth-child(2) {
-      padding: 3px 0 3px 26px; 
+      @media (min-width: 768px) {
+        padding: 3px 0 3px 26px;
+        border: none;
+      } 
     }
   }
 
   .logo {
     max-width: 176px;
-    width: 10vw;
+    width: 50%;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+       width: 133px;
+    }
+
+    @media (min-width: 1200px) {
+       width: 11vw;
+    }
   }
 
   &__user {
@@ -47,7 +116,14 @@
       font-size: 20px;
     }
   }
+  
+  .account-mobile {
+    display: inline-block;
 
+    .header__link {
+      border: none;
+    }
+  }
 }
 
 // =========== mobile burger ========

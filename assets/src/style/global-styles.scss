@@ -74,11 +74,19 @@ h2 {
 .container-main {
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 0;
+
+  @media (min-width: 768px) {
+    padding: 0 25px;
+  }
 }
 
 .main {
-  padding: 30px 0;
+  padding: 20px 0 50px;
+
+  @media (min-width: 768px) {
+    padding: 30px 0;
+  }
 }
 
 .row-wrap {
@@ -98,28 +106,63 @@ h2 {
   background-color: $color-yellow;
 }
 
+.hidden-tablet {
+  @media (min-width: 768px) {
+      display: none !important;
+  }
+}
+
+.hidden-mobile {
+  display: none !important;
+
+  @media (min-width: 768px) {
+      display: block !important;
+  }
+}
+
 // ======== filter =======
 .filter {
-  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 12px 0 12px 15px;
   border-top: $border;
   border-bottom: $border;
+  background-color: #fff;
+  z-index: 2;
+
+  @media (min-width: 768px) {
+    position: static;
+    padding: 15px 0;
+  }
 
   &-box {
     width: 100%;
   }
 
   &__item {
-    height: 33px;
-    padding: 0 17px 3px;
-    margin: 0 15px 0 0;
+    height: 27px;
+    padding: 0 15px 3px;
+    margin: 0 10px 0 0;
     text-align: center;
-    color: $color-gray;   
+    color: #c7c7c7;  
     border: $border;
     border-radius: $radius;
     cursor: pointer;
 
+    @media (min-width: 768px) {
+      color: $color-gray; 
+      height: 33px;
+      padding: 0 17px 3px;
+      margin: 0 15px 0 0;
+    }
+
     &.active {
-      color: #000;
+      color: #676767;
+
+      @media (min-width: 768px) {
+        color: #000;
+      }
 
       .icon {
         display: block; 
@@ -129,9 +172,13 @@ h2 {
 
   &-title {
     font-family: $font-light;
-    font-size: 20px;
+    font-size: 17px;
     line-height: 1;  
     text-transform: lowercase;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+    }
   }
 
   .icon {
@@ -143,6 +190,47 @@ h2 {
     img {
       display: block; 
     } 
+  }
+
+  .filter__item--parent {
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+    .icon {
+      display: inline-block;
+      width: 12px;
+      height: 11px;
+      margin: 0 8px 0 0;
+
+      .line {
+        width: 12px;
+        height: 2px;
+        background-color: #c7c7c7;
+
+        &:nth-child(2) {
+          width: 10px;
+        }
+
+        &:nth-child(3) {
+          width: 8px;
+        }
+
+        &-wrap {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          height: 100%;
+        }
+      }
+    }
+
+    &.active {
+      .icon .line {
+        background-color: #676767;
+      }
+    }
   }
 }
 
@@ -157,12 +245,13 @@ h2 {
 
   input[type="search"] {
     height: 22px;
-    padding: 0 18px 0 13px;
+    padding: 0 25px 2px 7px;
     border: none;
     border-radius: $radius;
     text-transform: lowercase;
     color: #000;
     font-size: 13px; 
+    line-height: 22px;
     outline: none; 
     -webkit-appearance: none; 
     width: 100%; 
@@ -170,7 +259,12 @@ h2 {
 
     &::-webkit-input-placeholder { color: $color-gray; }
     &::-moz-placeholder          { color: $color-gray; } 
-    &:-ms-input-placeholder      { color: $color-gray; } 
+    &:-ms-input-placeholder      { color: $color-gray; }
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration { display: none; } 
   }
 
   &-icon {
@@ -198,8 +292,7 @@ h2 {
 
   & + label {
     position: relative;
-    margin-bottom: 11px;
-    padding: 0 0 0 27px;
+    padding: 0 0 10px 27px;
     font-size: 18px;
     line-height: 1;
     font-family: $font-light;
