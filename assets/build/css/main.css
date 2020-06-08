@@ -555,6 +555,14 @@ h2 {
     padding-bottom: 5px;
     font-size: 21px;
     border-bottom: 1px solid #c7c7c7; }
+    .sidebar-title--sub {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      font-size: 19px;
+      font-family: "HelveticaNeue", Arial, sans-serif;
+      border: none;
+      margin-bottom: 5px; }
   .sidebar-list {
     margin-bottom: 17px; }
   .sidebar .acordeon-box {
@@ -583,6 +591,32 @@ h2 {
       transform: rotate(-135deg) translateY(-50%); }
     .sidebar .acordeon-box.active .ac-child {
       height: 100%; }
+  .sidebar .sidebar-list--sub-parent {
+    overflow: hidden; }
+    .sidebar .sidebar-list--sub-parent .ac-parent--sub {
+      position: relative;
+      cursor: pointer; }
+      .sidebar .sidebar-list--sub-parent .ac-parent--sub:before {
+        position: absolute;
+        content: "";
+        right: -16px;
+        top: 28%;
+        transform: rotate(45deg) translateY(-50%);
+        width: 2px;
+        height: 2px;
+        border: solid #000;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px; }
+    .sidebar .sidebar-list--sub-parent .sidebar-list--sub.ac-child--sub {
+      height: 0px;
+      overflow: hidden;
+      transition: .2s; }
+    .sidebar .sidebar-list--sub-parent.active .ac-parent--sub:before {
+      right: -25px;
+      transform: rotate(-135deg) translateY(-50%); }
+    .sidebar .sidebar-list--sub-parent.active .ac-child--sub {
+      height: 100%; }
   .sidebar .search {
     width: 190px;
     margin-bottom: 13px; }
@@ -603,6 +637,7 @@ h2 {
     position: relative; }
   .sidebar .close-icon {
     position: absolute;
+    top: 8px;
     right: 10px;
     width: 16px;
     height: 16px;

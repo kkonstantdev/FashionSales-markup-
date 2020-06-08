@@ -41,14 +41,21 @@
 		padding-bottom: 5px;
 		font-size: 21px;
 		border-bottom: $border;
+
+		&--sub {
+			width: fit-content;
+			font-size: 19px;
+			font-family: $font-main;
+			border: none;
+			margin-bottom: 5px;
+		}
 	}
 
 	&-list {
 		margin-bottom: 17px;
 	}
 
-	.acordeon {
-		&-box {
+	.acordeon-box{
 			overflow: hidden;
 
 			.ac-parent {
@@ -85,7 +92,46 @@
 					height: 100%;
 				}
 			}
-		}
+	 	
+	}
+
+	.sidebar-list--sub-parent {
+			overflow: hidden;
+
+			.ac-parent--sub {
+				position: relative;
+				cursor: pointer;
+
+				&:before {
+					position: absolute;
+					content: "";
+					right: -16px;
+					top: 28%; 
+					transform: rotate(45deg) translateY(-50%);
+					width: 2px;
+				    height: 2px;
+				    border: solid #000;
+				    border-width: 0 2px 2px 0;
+				    display: inline-block;
+				    padding: 3px;
+				}
+			}
+
+			.sidebar-list--sub.ac-child--sub {
+				height: 0px;
+				overflow: hidden;
+				transition: .2s;
+			}
+
+			&.active {
+				.ac-parent--sub:before {
+					right: -25px;
+					transform: rotate(-135deg) translateY(-50%);
+				}
+				.ac-child--sub {
+					height: 100%;
+				}
+			}
 	 	
 	}
 
@@ -124,6 +170,7 @@
 
 	.close-icon {
 		position: absolute;
+		top: 8px;
 		right: 10px;
 		width: 16px;
 		height: 16px;
