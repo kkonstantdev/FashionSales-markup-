@@ -129,7 +129,7 @@ h2 {
   border-top: $border;
   border-bottom: $border;
   background-color: #fff;
-  z-index: 2;
+  z-index: 10;
 
   @media (min-width: 768px) {
     position: static;
