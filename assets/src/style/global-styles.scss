@@ -79,6 +79,10 @@ h2 {
   @media (min-width: 768px) {
     padding: 0 25px;
   }
+
+  @media (min-width: 1200px) {
+    padding: 0 45px;
+  }
 }
 
 .container-main {
@@ -96,8 +100,12 @@ h2 {
   padding: 20px 0 50px;
 
   @media (min-width: 768px) {
-    margin-top: 140px;
+    margin-top: 130px;
     padding: 30px 0;
+  }
+
+  @media (min-width: 1200px) {
+    margin-top: 140px;
   }
 }
 
@@ -148,9 +156,14 @@ h2 {
   z-index: 10;
 
   @media (min-width: 768px) {
-    top: 76px;
+    top: 74px;
     bottom: auto;
-    padding: 15px 0;
+    padding: 10px 0;
+  }
+
+  @media (min-width: 1200px) {
+    top: 87px;
+    padding: 10px 5px;
   }
 
   &-box {
@@ -169,7 +182,6 @@ h2 {
 
     @media (min-width: 768px) {
       color: $color-gray; 
-      padding: 0 17px 3px;
       margin: 0 15px 0 0;
       border-radius: $radius;
     }
@@ -260,6 +272,11 @@ h2 {
   border-radius: $radius;
   min-height: 22px;
 
+  @media (min-width: 1200px) {
+    width: 196px;
+    margin-right: 35px;
+  }
+
   input[type="search"] {
     height: 22px;
     padding: 0 25px 2px 7px;
@@ -273,6 +290,13 @@ h2 {
     -webkit-appearance: none; 
     width: 100%; 
     vertical-align: middle;
+
+    @media (min-width: 1200px) {
+      height: 34px;
+      padding: 0 25px 2px 15px;
+      font-size: 19px;
+      line-height: 37;
+    }
 
     &::-webkit-input-placeholder { color: $color-gray; }
     &::-moz-placeholder          { color: $color-gray; } 
