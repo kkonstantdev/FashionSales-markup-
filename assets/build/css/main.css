@@ -204,7 +204,7 @@ h2 {
   position: fixed;
   width: 100%;
   bottom: 0;
-  padding: 12px 0 12px 15px;
+  padding: 9px 0 9px 15px;
   border-top: 1px solid #c7c7c7;
   border-bottom: 1px solid #c7c7c7;
   background-color: #fff;
@@ -216,20 +216,20 @@ h2 {
   .filter-box {
     width: 100%; }
   .filter__item {
-    height: 27px;
+    height: 33px;
     padding: 0 15px 3px;
     margin: 0 10px 0 0;
     text-align: center;
     color: #c7c7c7;
     border: 1px solid #c7c7c7;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer; }
     @media (min-width: 768px) {
       .filter__item {
         color: #868686;
-        height: 33px;
         padding: 0 17px 3px;
-        margin: 0 15px 0 0; } }
+        margin: 0 15px 0 0;
+        border-radius: 6px; } }
     .filter__item.active {
       color: #676767; }
       @media (min-width: 768px) {
@@ -473,8 +473,7 @@ h2 {
       border: none; } }
 
 .header .logo {
-  max-width: 176px;
-  width: 50%;
+  width: 200px;
   margin: 0 auto; }
   @media (min-width: 768px) {
     .header .logo {
@@ -753,7 +752,7 @@ h2 {
         padding-top: 8%; } }
   .product-title {
     font-family: "HelveticaNeue-Bold", Arial, sans-serif;
-    font-size: 5vw;
+    font-size: 4vw;
     text-transform: uppercase; }
     @media (min-width: 576px) {
       .product-title {
@@ -815,15 +814,15 @@ h2 {
       text-align: center;
       display: block;
       width: 100%;
-      height: 25px;
+      height: 28px;
       margin-right: 10px;
       background-color: #fff;
       border: 1px solid #c7c7c7;
       border-radius: 6px;
-      font-size: 3vw;
+      font-size: 3.5vw;
       font-family: "HelveticaNeue", Arial, sans-serif;
       color: #696969;
-      line-height: 24px;
+      line-height: 27px;
       text-transform: uppercase; }
       @media (min-width: 576px) {
         .product .location-link {
@@ -844,12 +843,13 @@ h2 {
       .product .location-link .icon {
         display: inline-block;
         vertical-align: middle;
-        width: 12px;
-        height: 15px;
+        width: 15px;
+        height: 66%;
         margin-left: 3px; }
         @media (min-width: 768px) {
           .product .location-link .icon {
-            width: 12px; } }
+            width: 12px;
+            height: 15px; } }
         @media (min-width: 1200px) {
           .product .location-link .icon {
             width: 14px; } }
@@ -860,14 +860,14 @@ h2 {
         .product .location-link .icon img {
           display: block; }
   .product-star .icon {
-    width: 25px;
-    height: 25px;
+    width: 28px;
+    height: 28px;
     background-color: #fff;
     border: 1px solid #c7c7c7;
     border-radius: 6px;
     font-size: 15px;
     color: #696969;
-    line-height: 24px;
+    line-height: 28px;
     cursor: pointer; }
     @media (min-width: 1200px) {
       .product-star .icon {

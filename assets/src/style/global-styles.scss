@@ -150,7 +150,7 @@ h2 {
   position: fixed;
   width: 100%;
   bottom: 0;
-  padding: 12px 0 12px 15px;
+  padding: 9px 0 9px 15px;
   border-top: $border;
   border-bottom: $border;
   background-color: #fff;
@@ -166,20 +166,20 @@ h2 {
   }
 
   &__item {
-    height: 27px;
+    height: 33px;
     padding: 0 15px 3px;
     margin: 0 10px 0 0;
     text-align: center;
     color: #c7c7c7;  
     border: $border;
-    border-radius: $radius;
+    border-radius: 4px;
     cursor: pointer;
 
     @media (min-width: 768px) {
       color: $color-gray; 
-      height: 33px;
       padding: 0 17px 3px;
       margin: 0 15px 0 0;
+      border-radius: $radius;
     }
 
     &.active {
