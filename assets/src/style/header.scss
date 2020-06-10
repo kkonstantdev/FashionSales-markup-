@@ -3,6 +3,13 @@
     padding: 17px 0;
   }
 
+  &-container {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
+  }
+
   &__wrap {
     @media (min-width: 768px) {
       display: flex;
@@ -46,7 +53,7 @@
     width: 32.7vw;
     padding: 3px 10px;
     text-align: center;
-    font-size: 12px;
+    font-size: 13px;
     color: #000;
     text-transform: uppercase;
     font-family: $font-medium;
@@ -96,14 +103,6 @@
   .logo {
     width: 200px;
     margin: 0 auto;
-
-    @media (min-width: 768px) {
-       width: 133px;
-    }
-
-    @media (min-width: 1200px) {
-       width: 11vw;
-    }
   }
 
   &__user {

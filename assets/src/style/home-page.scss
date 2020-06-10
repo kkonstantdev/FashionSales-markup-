@@ -11,18 +11,20 @@
 	top: 0;
 	width: 100%;
 	height: calc(100vh - 53px);
-	padding: 15px;
-	z-index: 1;
+	padding: 15px 15px 53px;
+	z-index: 15;
 	overflow-y: auto;
 	display: none;
 
 	@media (min-width: 768px) {
-		position: static;
+		position: sticky;
+  		top: 170px;
         display: block;
         width: 200px;
-        height: auto;
+        height: 100%;
         overflow: visible;
         padding: 0;
+        z-index: 1;
     }
 
     &-box {
@@ -152,10 +154,27 @@
 	}
 
 	.btn {
-		width: 100%;
+		width: calc(100% - 30px);
+		height: 36px;
+		line-height: 35px;
 
 		@media (min-width: 768px) {
 			width: 190px;
+			
+	    }
+
+	    &-wrap {
+	    	position: fixed;
+			width: 100%;
+			padding: 15px 0;
+			bottom: 53px;
+			background-color: #fff;
+			z-index: 5;
+
+			@media (min-width: 768px) {
+				position: static;
+				padding: 0;
+		    }
 	    }
 	}
 
@@ -205,7 +224,7 @@
 
 	&-img {
 		position: relative;
-		width: 60%;
+		width: 54%;
 
 		@media (min-width: 576px) {
 			width: 63%;

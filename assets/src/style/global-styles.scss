@@ -82,34 +82,21 @@ h2 {
 }
 
 .container-main {
-  max-width: 100%;
+  max-width: 1920px;
   margin: 0 auto;
   padding: 0;
 
   @media (min-width: 768px) {
     padding: 0 25px;
   }
-
-  @media (min-width: 1200px) {
-    max-width: 1200px;
-    padding: 0 15px;
-  }
-
-  @media (min-width: 1440px) {
-    max-width: 1440px;
-    padding: 0 20px;
-  }
-
-  @media (min-width: 1920px) {
-    max-width: 1920px;
-    padding: 0 25px;
-  }
 }
 
 .main {
+  margin-top: 105px;
   padding: 20px 0 50px;
 
   @media (min-width: 768px) {
+    margin-top: 140px;
     padding: 30px 0;
   }
 }
@@ -145,6 +132,10 @@ h2 {
   }
 }
 
+.position-fixed {
+  position: fixed;
+}
+
 // ======== filter =======
 .filter {
   position: fixed;
@@ -157,7 +148,8 @@ h2 {
   z-index: 10;
 
   @media (min-width: 768px) {
-    position: static;
+    top: 76px;
+    bottom: auto;
     padding: 15px 0;
   }
 

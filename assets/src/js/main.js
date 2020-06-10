@@ -18,4 +18,5 @@ $(document).ready(function() {
 		$('.sidebar').removeClass('js--open');
 		$('body').css('overflow','');
 	})
+
 });
