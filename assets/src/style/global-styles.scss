@@ -71,12 +71,37 @@ h2 {
 }
 
 // =========== global styles =======
-.container-main {
-  max-width: 1920px;
+.container-full {
+  max-width: 1920;
   margin: 0 auto;
   padding: 0;
 
   @media (min-width: 768px) {
+    padding: 0 25px;
+  }
+}
+
+.container-main {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (min-width: 768px) {
+    padding: 0 25px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+    padding: 0 15px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: 1920px) {
+    max-width: 1920px;
     padding: 0 25px;
   }
 }
@@ -369,6 +394,11 @@ h2 {
       border-width: 0 2px 2px 0;
       display: inline-block;
       padding: 3px;
+      transition: .2s;
+    }
+
+    &:hover:before {
+      right: 9px;
     }
   }
 }
