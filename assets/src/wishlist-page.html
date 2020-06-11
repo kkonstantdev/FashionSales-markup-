@@ -7,71 +7,8 @@
 <script src="https://kit.fontawesome.com/afc99787a6.js"></script>
 <title>Home page</title>
 </head>
-<body class="home">
-    <div class="wrapper">
-        <div class="content"> 
-            
-            <div class="container-full header-container">
-             	<header class="header">
-                    <div class="header__wrap">
-                        <div class="header__wishlist d-flex j-content-center hidden-tablet">
-                            <div class="header__wishlist-title">Wishlist</div>
-                            <div class="close-icon hidden-tablet">
-                                <a href="index.html" class="close-icon__link">
-                                    <img src="img/icons/close.svg" alt="icon img" />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="header-left">
-                            <a href="#" class="header__link active">
-                                <span>Men</span>
-                            </a>
-                            <a href="#" class="header__link">
-                                <span>Women</span>
-                            </a>
-                            <span class="account-mobile hidden-tablet">
-                                <a href="wishlist-page.html" class="header__link">
-                                    <span>Wishlist</span>
-                                </a>
-                            </span>              
-                        </div>
-                        
-                        <div class="logo-wrap"> 
-                            <div class="logo">
-                                <a href="#">
-                                    <img src="img/logo.png" alt="logo img"/>
-                                </a>
-                            </div>
-                        </div>
-                   
-                        <div class="header-right d-flex align-items-center">
-                            <div class="search">
-                                <input type="search" placeholder="Search">
-                                <span class="search-icon">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </span>
-                            </div>
-                            <div class="header__user d-flex align-items-center">
-                                <a href="#" class="login">
-                                    <span class="icon">
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                    </span>
-                                </a>
-                                <a href="index.html" class="home-wishlist-link">
-                                    <span class="icon">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                    </span>
-                                </a>
-                                <a href="wishlist-page.html" class="wishlist-link">
-                                    <span class="icon">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                    </span>
-                                </a>
-                            </div>         
-                        </div>
-                	</div>
-            	</header>
-            </div>
+<body class="wishlist-page">
+//= template/header.html
             <div class="filter">     
                 <div class="container-main">
                     <div class="filter-box d-flex align-items-center">
@@ -108,8 +45,31 @@
             </div>
             <div class="container-main">
                 <main class="main">
-                    <div class="row-wrap"> 
-                        <sidebar class="sidebar sidebar--home">
+                    <div class="row-wrap">
+                    <sidebar class="sidebar sidebar--wishlist hidden-mobile">
+                            <div class="sidebar-wrap">
+                                <div class="close-icon hidden-tablet"><img src="img/icons/close.svg" alt="icon img" /></div> 
+                                <div class="sidebar-box"> 
+                                    <div class="sidebar-title">Sort by</div>
+                                    <div class="sidebar-list d-flex d-column">
+                                        <input type="radio" name="radio" class="radio" id="radio1" checked />
+                                        <label for="radio1">Date</label>
+                                        <input type="radio" name="radio" class="radio" id="radio2" />
+                                        <label for="radio2">Price: high to low</label>
+                                        <input type="radio" name="radio" class="radio" id="radio3" />
+                                        <label for="radio3">Price: low to hight</label>
+                                        <input type="radio" name="radio" class="radio" id="radio4" />
+                                        <label for="radio4">Discount: high to low</label>
+                                        <input type="radio" name="radio" class="radio" id="radio5" />
+                                        <label for="radio5">Discount: low to hight</label>
+                                    </div>
+                                </div>
+                                <div class="btn-wrap">
+                                    <a href="#" class="btn btn--black btn--arrow">Show 503 items</a>
+                                </div>
+                            </div> 
+                        </sidebar> 
+                        <sidebar class="sidebar sidebar--home hidden-tablet">
                             <div class="sidebar-wrap">
                                 <div class="close-icon hidden-tablet"><img src="img/icons/close.svg" alt="icon img" /></div> 
                                 <div class="sidebar-box"> 
@@ -878,16 +838,5 @@
                 </main>
             </div>
 
-		</div>
-    </div>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous">
-	</script>
-	<script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"
-    integrity="sha256-F0O1TmEa4I8N24nY0bya59eP6svWcshqX1uzwaWC4F4="
-    crossorigin="anonymous">
-	</script>
-	<script src="js/main.js"></script>
-</body>
-</html>
+//= template/footer.html
+ 

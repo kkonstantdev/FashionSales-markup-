@@ -199,6 +199,16 @@ h2 {
 .position-fixed {
   position: fixed; }
 
+.home .login,
+.wishlist-page .login {
+  display: none; }
+
+.home .home-wishlist-link {
+  display: none; }
+
+.wishlist-page .wishlist-link {
+  display: none; }
+
 .filter {
   position: fixed;
   width: 100%;
@@ -261,11 +271,11 @@ h2 {
   .filter .filter__item--parent .icon {
     display: inline-block;
     width: 12px;
-    height: 11px;
+    height: 9px;
     margin: 0 8px 0 0; }
     .filter .filter__item--parent .icon .line {
       width: 12px;
-      height: 2px;
+      height: 1px;
       background-color: #c7c7c7; }
       .filter .filter__item--parent .icon .line:nth-child(2) {
         width: 10px; }
@@ -456,7 +466,7 @@ h2 {
   width: 32.7vw;
   padding: 0 10px;
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
   color: #000;
   text-transform: uppercase;
   font-family: "HelveticaNeue-Medium", Arial, sans-serif;
@@ -509,58 +519,38 @@ h2 {
   .header .account-mobile .header__link {
     border: none; }
 
-.nav-burger {
-  display: none;
-  position: relative;
-  width: 22px;
-  height: 14px;
-  transform: rotate(0deg);
-  transition: .5s ease-in-out;
-  cursor: pointer; }
-  @media only screen and (max-width: 767px) {
-    .nav-burger {
+.home .header__wishlist {
+  display: none; }
+
+.wishlist-page .header-left,
+.wishlist-page .logo-wrap {
+  display: none; }
+  @media (min-width: 768px) {
+    .wishlist-page .header-left,
+    .wishlist-page .logo-wrap {
       display: block; } }
 
-.nav-burger span {
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  background: #292929;
-  border-radius: 3px;
-  opacity: 1;
-  left: 0;
-  transform: rotate(0deg);
-  transition: .25s ease-in-out; }
-
-.nav-burger span:nth-child(1) {
-  top: 0px;
-  transform-origin: left center; }
-
-.nav-burger span:nth-child(2) {
-  top: 5px;
-  transform-origin: left center; }
-
-.nav-burger span:nth-child(3) {
-  top: 10px;
-  transform-origin: left center; }
-
-.nav-burger.open span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 0px;
-  left: 2px; }
-
-.nav-burger.open span:nth-child(2) {
-  width: 0%;
-  opacity: 0; }
-
-.nav-burger.open span:nth-child(3) {
-  transform: rotate(-45deg);
-  top: 15px;
-  left: 2px; }
-
-.home .login {
-  display: none; }
+.wishlist-page .header__wishlist {
+  position: relative;
+  padding: 25px 0; }
+  .wishlist-page .header__wishlist-title {
+    font-size: 4vw;
+    color: #000;
+    text-transform: uppercase;
+    font-family: "HelveticaNeue-Medium", Arial, sans-serif; }
+    @media (min-width: 576px) {
+      .wishlist-page .header__wishlist-title {
+        font-size: 3vw; } }
+  .wishlist-page .header__wishlist .close-icon {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    cursor: pointer; }
+    .wishlist-page .header__wishlist .close-icon img {
+      display: block; }
 
 .sidebar {
   position: fixed;
@@ -568,7 +558,7 @@ h2 {
   top: 0;
   width: 100%;
   height: calc(100vh - 53px);
-  padding: 15px 15px 53px;
+  padding: 23px 15px 53px;
   z-index: 15;
   overflow-y: auto;
   display: none; }
@@ -690,11 +680,11 @@ h2 {
   .sidebar-wrap {
     position: relative; }
   .sidebar .close-icon {
-    position: absolute;
-    top: 8px;
-    right: 10px;
-    width: 16px;
-    height: 16px;
+    position: fixed;
+    top: 27px;
+    right: 25px;
+    width: 14px;
+    height: 14px;
     cursor: pointer; }
 
 .product {
@@ -851,7 +841,7 @@ h2 {
       background-color: #fff;
       border: 1px solid #c7c7c7;
       border-radius: 6px;
-      font-size: 3.5vw;
+      font-size: 3.4vw;
       font-family: "HelveticaNeue", Arial, sans-serif;
       color: #696969;
       line-height: 27px;
@@ -912,3 +902,12 @@ h2 {
         height: 37px;
         font-size: 17px;
         line-height: 37px; } }
+
+.wishlist-page .main {
+  margin-top: 66px; }
+  @media (min-width: 768px) {
+    .wishlist-page .main {
+      margin-top: 130px; } }
+  @media (min-width: 1200px) {
+    .wishlist-page .main {
+      margin-top: 140px; } }

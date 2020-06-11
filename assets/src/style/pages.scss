@@ -1,17 +1,11 @@
-.home {
-	.login {
-		display: none;
-	}
-}
-
-// ========= sidebar ==========
+// ============ sidebar ========
 .sidebar {
 	position: fixed;
 	background-color: #fff;
 	top: 0;
 	width: 100%;
 	height: calc(100vh - 53px);
-	padding: 15px 15px 53px;
+	padding: 23px 15px 53px;
 	z-index: 15;
 	overflow-y: auto;
 	display: none;
@@ -188,11 +182,11 @@
 	}
 
 	.close-icon {
-		position: absolute;
-		top: 8px;
-		right: 10px;
-		width: 16px;
-		height: 16px;
+		position: fixed;
+		top: 27px;
+		right: 25px;
+		width: 14px;
+		height: 14px;
 		cursor: pointer;
 	}
 }
@@ -409,7 +403,7 @@
 			background-color: #fff;
 			border: $border;
 			border-radius: $radius;
-			font-size: 3.5vw;
+			font-size: 3.4vw;
 			font-family: $font-main;
 			color: #696969;
 			line-height: 27px;
@@ -488,4 +482,20 @@
 		}
 	}
 }
+
+// ========== Whishlist page ========
+.wishlist-page {
+	.main {
+		margin-top: 66px;
+
+		@media (min-width: 768px) {
+		    margin-top: 130px;
+		  }
+
+		  @media (min-width: 1200px) {
+		    margin-top: 140px;
+		  }
+	}
+}
+
 

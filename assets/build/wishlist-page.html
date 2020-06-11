@@ -7,7 +7,7 @@
 <script src="https://kit.fontawesome.com/afc99787a6.js"></script>
 <title>Home page</title>
 </head>
-<body class="home">
+<body class="wishlist-page">
     <div class="wrapper">
         <div class="content"> 
             
@@ -108,8 +108,31 @@
             </div>
             <div class="container-main">
                 <main class="main">
-                    <div class="row-wrap"> 
-                        <sidebar class="sidebar sidebar--home">
+                    <div class="row-wrap">
+                    <sidebar class="sidebar sidebar--wishlist hidden-mobile">
+                            <div class="sidebar-wrap">
+                                <div class="close-icon hidden-tablet"><img src="img/icons/close.svg" alt="icon img" /></div> 
+                                <div class="sidebar-box"> 
+                                    <div class="sidebar-title">Sort by</div>
+                                    <div class="sidebar-list d-flex d-column">
+                                        <input type="radio" name="radio" class="radio" id="radio1" checked />
+                                        <label for="radio1">Date</label>
+                                        <input type="radio" name="radio" class="radio" id="radio2" />
+                                        <label for="radio2">Price: high to low</label>
+                                        <input type="radio" name="radio" class="radio" id="radio3" />
+                                        <label for="radio3">Price: low to hight</label>
+                                        <input type="radio" name="radio" class="radio" id="radio4" />
+                                        <label for="radio4">Discount: high to low</label>
+                                        <input type="radio" name="radio" class="radio" id="radio5" />
+                                        <label for="radio5">Discount: low to hight</label>
+                                    </div>
+                                </div>
+                                <div class="btn-wrap">
+                                    <a href="#" class="btn btn--black btn--arrow">Show 503 items</a>
+                                </div>
+                            </div> 
+                        </sidebar> 
+                        <sidebar class="sidebar sidebar--home hidden-tablet">
                             <div class="sidebar-wrap">
                                 <div class="close-icon hidden-tablet"><img src="img/icons/close.svg" alt="icon img" /></div> 
                                 <div class="sidebar-box"> 

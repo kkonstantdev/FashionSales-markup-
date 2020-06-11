@@ -144,6 +144,25 @@ h2 {
   position: fixed;
 }
 
+.home,
+.wishlist-page {
+  .login {
+    display: none;
+  }
+}
+
+.home {
+  .home-wishlist-link {
+    display: none;
+  } 
+}
+
+.wishlist-page {
+  .wishlist-link {
+    display: none;
+  } 
+}
+
 // ======== filter =======
 .filter {
   position: fixed;
@@ -229,12 +248,12 @@ h2 {
     .icon {
       display: inline-block;
       width: 12px;
-      height: 11px;
+      height: 9px;
       margin: 0 8px 0 0;
 
       .line {
         width: 12px;
-        height: 2px;
+        height: 1px;
         background-color: #c7c7c7;
 
         &:nth-child(2) {

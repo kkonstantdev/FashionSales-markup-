@@ -13,7 +13,7 @@ $(document).ready(function() {
 		$('body').css('overflow','hidden');
 	});
 
-	$('.sidebar .close-icon').on('click',function() {
+	$('.sidebar--home .close-icon').on('click',function() {
 		$('.filter__item--parent').removeClass('active');
 		$('.sidebar').removeClass('js--open');
 		$('body').css('overflow','');
