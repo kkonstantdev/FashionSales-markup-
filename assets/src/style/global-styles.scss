@@ -86,7 +86,7 @@ h2 {
 }
 
 .container-main {
-  max-width: 1920px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0;
 
@@ -96,7 +96,6 @@ h2 {
 }
 
 .main {
-  margin-top: 105px;
   padding: 20px 0 50px;
 
   @media (min-width: 768px) {
@@ -172,7 +171,7 @@ h2 {
   border-top: $border;
   border-bottom: $border;
   background-color: #fff;
-  z-index: 10;
+  z-index: 20;
 
   @media (min-width: 768px) {
     top: 74px;
@@ -352,7 +351,7 @@ h2 {
 
   & + label {
     position: relative;
-    padding: 0 0 10px 27px;
+    padding: 0 0 10px 22px;
     font-size: 18px;
     line-height: 1;
     font-family: $font-light;

@@ -4,10 +4,13 @@
   }
 
   &-container {
-    position: fixed;
     width: 100%;
     background-color: #fff;
     z-index: 10;
+
+    @media (min-width: 768px) {
+      position: fixed;
+    }
   }
 
   &__wrap {
@@ -136,6 +139,10 @@
 }
 
 .wishlist-page {
+  .header-container {
+    position: fixed;
+  }
+  
   .header-left,
   .logo-wrap {
     display: none;
