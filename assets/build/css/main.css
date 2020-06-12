@@ -227,7 +227,13 @@ h2 {
       top: 87px;
       padding: 10px 5px; } }
   .filter-box {
-    width: 100%; }
+    position: relative;
+    width: 100%;
+    overflow: hidden; }
+    @media (min-width: 768px) {
+      .filter-box--inner {
+        margin-left: 48px;
+        transition: .5s; } }
   .filter__item {
     height: 33px;
     padding: 0 15px 3px;
@@ -264,9 +270,6 @@ h2 {
     display: none; }
     .filter .icon img {
       display: block; }
-  @media (min-width: 768px) {
-    .filter .filter__item--parent {
-      display: none; } }
   .filter .filter__item--parent .icon {
     display: inline-block;
     width: 12px;
@@ -288,6 +291,34 @@ h2 {
         height: 100%; }
   .filter .filter__item--parent.active .icon .line {
     background-color: #676767; }
+  .filter .filter__item--parent-desktop {
+    position: absolute;
+    width: 33px;
+    border: 1px solid #676767;
+    background-color: #fff; }
+    .filter .filter__item--parent-desktop:before {
+      position: absolute;
+      content: "";
+      top: -4px;
+      right: -12px;
+      width: 10px;
+      height: 37px;
+      background-color: #fff; }
+    .filter .filter__item--parent-desktop .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 12px;
+      margin: 0; }
+      .filter .filter__item--parent-desktop .icon .line {
+        width: 16px;
+        background-color: #676767; }
+        .filter .filter__item--parent-desktop .icon .line:nth-child(2) {
+          width: 10px; }
+        .filter .filter__item--parent-desktop .icon .line:nth-child(3) {
+          width: 7px; }
 
 .search {
   position: relative;
