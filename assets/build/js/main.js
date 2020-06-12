@@ -30,14 +30,15 @@ $(document).ready(function() {
 			if(parentElemWidth < innerElemWidth) {
 				$('.filter-box--inner').css({'margin-left': '-' + margLeft + 'px'});
 			}
+
 			if ($(window).width() > '992'){
-				if(innerElemWidth/2 < margLeft) {
+				if(innerElemWidth-800 < margLeft) {
 					$('.filter-box--inner').css({'margin-left': '48px'});
 					margLeft = 0;
 				}
 			}
 			if ($(window).width() <= '992'){
-				if(innerElemWidth/1.5 < margLeft) {
+				if(innerElemWidth-500 < margLeft) {
 					$('.filter-box--inner').css({'margin-left': '48px'});
 					margLeft = 0;
 				}

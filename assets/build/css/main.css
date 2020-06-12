@@ -700,15 +700,14 @@ h2 {
     .sidebar .search-icon {
       font-size: 13px; }
   .sidebar .btn {
-    width: calc(100% - 30px);
     height: 36px;
     line-height: 35px; }
     @media (min-width: 768px) {
       .sidebar .btn {
         width: 190px; } }
     .sidebar .btn-wrap {
-      position: absolute;
-      width: 100%;
+      position: fixed;
+      width: calc(100% - 30px);
       padding: 15px 0;
       background-color: #fff;
       z-index: 5; }
