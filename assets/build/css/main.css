@@ -195,6 +195,10 @@ h2 {
     .hidden-mobile {
       display: block !important; } }
 
+.body-overflow {
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch; }
+
 .position-fixed {
   position: fixed; }
 
@@ -221,7 +225,8 @@ h2 {
     .filter {
       top: 74px;
       bottom: auto;
-      padding: 10px 0; } }
+      padding: 10px 0;
+      overflow-x: visible; } }
   @media (min-width: 1200px) {
     .filter {
       top: 87px;
@@ -229,11 +234,15 @@ h2 {
   .filter-box {
     position: relative;
     width: 100%;
-    overflow: hidden; }
+    overflow-x: auto; }
     @media (min-width: 768px) {
-      .filter-box--inner {
-        margin-left: 48px;
-        transition: .5s; } }
+      .filter-box {
+        overflow-x: visible; } }
+    .filter-box--inner {
+      margin-left: 82px; }
+      @media (min-width: 768px) {
+        .filter-box--inner {
+          margin-left: 0; } }
   .filter__item {
     height: 33px;
     padding: 0 15px 3px;
@@ -270,55 +279,40 @@ h2 {
     display: none; }
     .filter .icon img {
       display: block; }
-  .filter .filter__item--parent .icon {
-    display: inline-block;
-    width: 12px;
-    height: 9px;
-    margin: 0 8px 0 0; }
-    .filter .filter__item--parent .icon .line {
-      width: 12px;
-      height: 1px;
-      background-color: #c7c7c7; }
-      .filter .filter__item--parent .icon .line:nth-child(2) {
-        width: 10px; }
-      .filter .filter__item--parent .icon .line:nth-child(3) {
-        width: 8px; }
-      .filter .filter__item--parent .icon .line-wrap {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%; }
-  .filter .filter__item--parent.active .icon .line {
-    background-color: #676767; }
-  .filter .filter__item--parent-desktop {
+  .filter .filter__item--parent {
     position: absolute;
-    width: 33px;
-    border: 1px solid #676767;
-    background-color: #fff; }
-    .filter .filter__item--parent-desktop:before {
+    padding: 0 10px 3px 10px;
+    background-color: #fff;
+    z-index: 2; }
+    .filter .filter__item--parent:before {
       position: absolute;
       content: "";
-      top: -4px;
-      right: -12px;
+      top: -3px;
+      right: -11px;
       width: 10px;
-      height: 37px;
+      height: 36px;
       background-color: #fff; }
-    .filter .filter__item--parent-desktop .icon {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      height: 12px;
-      margin: 0; }
-      .filter .filter__item--parent-desktop .icon .line {
-        width: 16px;
-        background-color: #676767; }
-        .filter .filter__item--parent-desktop .icon .line:nth-child(2) {
+    .filter .filter__item--parent .icon {
+      display: inline-block;
+      width: 12px;
+      height: 9px;
+      margin: 0 8px 0 0; }
+      .filter .filter__item--parent .icon .line {
+        width: 12px;
+        height: 1px;
+        background-color: #c7c7c7; }
+        .filter .filter__item--parent .icon .line:nth-child(2) {
           width: 10px; }
-        .filter .filter__item--parent-desktop .icon .line:nth-child(3) {
-          width: 7px; }
+        .filter .filter__item--parent .icon .line:nth-child(3) {
+          width: 8px; }
+        .filter .filter__item--parent .icon .line-wrap {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          height: 100%; }
+    .filter .filter__item--parent.active .icon .line {
+      background-color: #676767; }
 
 .search {
   position: relative;
@@ -592,7 +586,7 @@ h2 {
   background-color: #fff;
   top: 100%;
   width: 100%;
-  height: calc(100vh - 53px);
+  height: calc(100% - 30px);
   padding: 23px 15px 53px;
   z-index: 15;
   transition: .2s; }
@@ -609,7 +603,7 @@ h2 {
       z-index: 1; } }
   .sidebar-wrap {
     position: relative;
-    height: calc( 100% - 15px);
+    height: calc( 100% - 30px);
     overflow-y: auto; }
     @media (min-width: 768px) {
       .sidebar-wrap {
