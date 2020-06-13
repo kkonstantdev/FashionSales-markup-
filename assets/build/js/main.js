@@ -8,9 +8,9 @@ $(document).ready(function() {
 	});
 
 	$('#filter-parent-mobile').on('click',function() {
-		$(this).addClass('active');
-		$('.sidebar').addClass('js--open');
-		$('body').addClass('body-overflow');
+		$(this).toggleClass('active');
+		$('.sidebar').toggleClass('js--open');
+		$('body').toggleClass('body-overflow');
 	});
 
 	$('.sidebar--home .close-icon').on('click',function() {
