@@ -59,6 +59,10 @@
 
 	&-list {
 		margin-bottom: 17px;
+
+		.search {
+			min-height: 32px;
+		}
 	}
 
 	.acordeon-box{
@@ -114,8 +118,8 @@
 				right: -16px;
 				top: 28%; 
 				transform: rotate(45deg) translateY(-50%);
-				width: 2px;
-				height: 2px;
+				width: 0;
+				height: 1px;
 				border: solid #000;
 				border-width: 0 2px 2px 0;
 				display: inline-block;
@@ -144,6 +148,11 @@
 	.search {
 		width: 190px;
 		margin-bottom: 13px;
+
+		&-box {
+			max-height: 155px;
+			overflow-y: auto;
+		}
 
 		input[type=search] {
 			height: 30px;
@@ -241,7 +250,7 @@
 
 		    @media (min-width: 1200px) {
 				padding: 5px 12px;
-			    font-size: 15px;
+			    font-size: o.8vw;
 			}      
 		}
 	}
@@ -295,8 +304,11 @@
 	}
 
 	&-preview {
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	height: 100%;
 		width: 45%;
-		padding-top: 5%;
 
 		@media (min-width: 768px) {
 			width: 40%;
@@ -304,7 +316,6 @@
 
 		@media (min-width: 1200px) {
 			width: 50%;
-			padding-top: 8%;
 		}
 	}
 
@@ -312,6 +323,10 @@
 		font-family: $font-bold;
 		font-size: 4vw;
 		text-transform: uppercase;
+		min-height: 46px;
+    	display: flex;
+    	justify-content: flex-end;
+    	flex-direction: column;
 
 		@media (min-width: 576px) {
 			font-size: 3vw;
@@ -432,11 +447,12 @@
 
 			@media (min-width: 1200px) {
 				height: 30px;
-				line-height: 30px;
-				font-size: 0.8vw;
+				line-height: 28px;
+				font-size: 10px;
 			}
 
 			@media (min-width: 1440px) {
+				line-height: 30px;
 				font-size: 12px;			
 			}
 
@@ -453,7 +469,8 @@
 				}
 
 				@media (min-width: 1200px) {
-					width: 14px;
+					width: 17px;
+					height: 21px;
 				}
 
 				img {
@@ -463,22 +480,35 @@
 		}
 	}
 
-	&-star .icon {
-		width: 28px;
-		height: 28px;
-		background-color: #fff;
-		border: $border;
-		border-radius: $radius;
-		font-size: 15px;
-		color: #696969;
-		line-height: 28px;
-		cursor: pointer;
+	&-star {
+		border: 1px solid #c7c7c7;
+    	border-radius: 6px;
+    	box-sizing: border-box;
 
-		@media (min-width: 1200px) {
-			width: 30px;
-			height: 30px;
-			line-height: 30px;
+		.location-link {
+			border: none;
+			height: 28px;
+            width: 28px;
+            margin-right: 0;
+
+			.icon {
+				width: 15px;
+				height: 17px;
+				background-color: #fff;
+				border: none;
+				color: #696969;
+				line-height: 28px;
+				cursor: pointer;
+				margin-left: 0;
+
+				@media (min-width: 1200px) {
+					width: 18px;
+					height: 22px;
+					line-height: 30px;
+				}
+			}
 		}
+
 	}
 }
 
