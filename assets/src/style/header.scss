@@ -63,11 +63,19 @@
     border-right: $border;
 
     @media (min-width: 768px) {
-        width: auto;
-        padding: 0 33px 0 0;
-        font-size: 15px;
-        font-family: $font-light;
-        color: $color-gray;
+      width: auto;
+      padding: 0 33px 0 0;
+      font-size: 1.5vw;
+      font-family: $font-light;
+      color: $color-gray;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 1.1vw;
+    }
+
+    @media (min-width: 1440px) {
+      font-size: 16px;
     } 
 
     &.active {

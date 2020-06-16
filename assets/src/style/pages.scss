@@ -4,7 +4,7 @@
 	background-color: #fff;
 	top: 100%;
 	width: 100%;
-	height: calc(100% - 30px);
+	height: calc(100% - 50px);
 	padding: 23px 15px 53px;
 	z-index: 15;
 	transition: .2s;
@@ -13,8 +13,8 @@
 		position: sticky;
   		top: 170px;
         display: block;
+        height: calc(100vh - 220px);
         width: 200px;
-        height: 100%;
         overflow: visible;
         padding: 0;
         z-index: 1;
@@ -23,12 +23,8 @@
     &-wrap {
     	position: relative;
     	height: calc( 100% - 30px);
+    	margin-bottom: 10px;
     	overflow-y: auto;
-
-    	@media (min-width: 768px) {
-			height: auto;
-			overflow: visible;
-	    }
     }
 
     &-box {
@@ -40,7 +36,7 @@
     }
 
 	&-title {
-		width: 190px;
+		width: 180px;
 		font-family: $font-medium;
 		color: #000;
 		margin-bottom: 17px;
@@ -116,7 +112,7 @@
 				position: absolute;
 				content: "";
 				right: -16px;
-				top: 28%; 
+				top: 35%; 
 				transform: rotate(45deg) translateY(-50%);
 				width: 0;
 				height: 1px;
@@ -204,6 +200,7 @@
 		cursor: pointer;
 	}
 }
+
 
 // ========= product ========
 .product {
@@ -308,7 +305,7 @@
     	justify-content: center;
     	align-items: center;
     	height: 100%;
-		width: 45%;
+		width: 42%;
 
 		@media (min-width: 768px) {
 			width: 40%;
@@ -370,7 +367,7 @@
 	}
 
 	.price {
-		margin-bottom: 4%;
+		margin-bottom: 7%;
 
 		&__item {
 			font-size: 5vw;
@@ -436,6 +433,7 @@
 			color: #696969;
 			line-height: 27px;
 			text-transform: uppercase;
+			transition: .2s;
 
 			@media (min-width: 576px) {
 				font-size: 1.6vw;
@@ -453,15 +451,24 @@
 
 			@media (min-width: 1440px) {
 				line-height: 30px;
-				font-size: 12px;			
+				font-size: 13px;			
+			}
+
+			&:hover {
+				background-color: #c7c7c7;
 			}
 
 			.icon {
 				display: inline-block;
 				vertical-align: middle;
-				width: 15px;
-				height: 66%;
+				width: 3.4vw;
+				height: 3.7vw;
 				margin-left: 3px;
+
+				@media (min-width: 576px) {
+					width: 1.5vw;
+					height: 1.6vw;
+				}
 
 				@media (min-width: 768px) {
 					width: 12px;
@@ -469,8 +476,13 @@
 				}
 
 				@media (min-width: 1200px) {
-					width: 17px;
-					height: 21px;
+					width: 10px;
+					height: 12px;
+				}
+
+				@media (min-width: 1440px) {
+					width: 12px;
+					height: 14px;
 				}
 
 				img {
@@ -490,6 +502,10 @@
 			height: 28px;
             width: 28px;
             margin-right: 0;
+
+            &:hover {
+            	background-color: #fff;
+            }
 
 			.icon {
 				width: 15px;
