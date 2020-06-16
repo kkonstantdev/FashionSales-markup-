@@ -18,4 +18,8 @@ $(document).ready(function() {
 		$('.sidebar').removeClass('js--open');
 		$('body').removeClass('body-overflow');
 	});
+
+	$('.product-star .location-link').on('click',function() {
+		$(this).toggleClass('js--active');
+	});
 });

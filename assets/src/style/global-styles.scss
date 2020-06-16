@@ -190,12 +190,6 @@ h2 {
     padding: 10px 5px;
   }
 
-  &-parent-mobile {
-    &__content {
-
-    }
-  }
-
   &-box {
     position: relative;
     width: 100%;
@@ -217,9 +211,9 @@ h2 {
   }
 
   &__item {
+    position: relative;
     margin: 0 10px 0 0;
-    padding: 6px 10px 8px;
-    text-align: center;
+    padding: 6px 20px 8px 10px;
     color: #c7c7c7;  
     border: $border;
     border-radius: 4px;
@@ -264,9 +258,12 @@ h2 {
   }
 
   .icon {
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 8px;
-    height: 4px;  
-    margin-left: 8px;  
+    height: 8px;    
     display: none; 
 
     img {
@@ -299,10 +296,12 @@ h2 {
     }
 
     .icon {
+      position: static;
       display: inline-block;
       width: 12px;
       height: 9px;
       margin: 0 8px 0 0;
+      transform: none;
 
       .line {
         width: 12px;
@@ -351,10 +350,11 @@ h2 {
 
   input[type="search"] {
     height: 22px;
-    padding: 0 25px 2px 7px;
+    padding: 0 32px 2px 7px;
     border: none;
     border-radius: $radius;
     text-transform: lowercase;
+    font-family: $font-main;
     color: #000;
     font-size: 13px; 
     line-height: 22px;
@@ -365,14 +365,14 @@ h2 {
 
     @media (min-width: 1200px) {
       height: 34px;
-      padding: 0 25px 2px 15px;
+      padding: 0 32px 2px 15px;
       font-size: 19px;
       line-height: 37;
     }
 
-    &::-webkit-input-placeholder { color: $color-gray; }
-    &::-moz-placeholder          { color: $color-gray; } 
-    &:-ms-input-placeholder      { color: $color-gray; }
+    &::-webkit-input-placeholder { color: $color-gray; font-family:$font-light; }
+    &::-moz-placeholder          { color: $color-gray; font-family:$font-light; } 
+    &:-ms-input-placeholder      { color: $color-gray; font-family:$font-light; }
 
     &::-webkit-search-decoration,
     &::-webkit-search-cancel-button,
@@ -516,3 +516,8 @@ h2 {
   }
 }
 
+.scroll-block {overflow-y: scroll;}
+.scroll-block::-webkit-scrollbar-track {border-radius: 4px;}
+.scroll-block::-webkit-scrollbar {width: 6px;}
+.scroll-block::-webkit-scrollbar-thumb {border-radius: 4px;background: #ccc;}
+.scroll-block:hover::-webkit-scrollbar-thumb {background: #ccc;}
