@@ -185,6 +185,9 @@ h2 {
 .color-yellow {
   background-color: #e9d02a; }
 
+.color-orange {
+  background-color: orange; }
+
 @media (min-width: 768px) {
   .hidden-tablet {
     display: none !important; } }
@@ -397,6 +400,7 @@ h2 {
   .checkbox + label {
     position: relative;
     padding: 0 0 10px 22px;
+    background-color: #fff;
     font-size: 18px;
     line-height: 1;
     font-family: "HelveticaNeue-Light", Arial, sans-serif;
@@ -446,7 +450,8 @@ h2 {
   .radio:checked + label,
   .checkbox:checked + label {
     font-family: "HelveticaNeue", Arial, sans-serif;
-    color: #000; }
+    color: #000;
+    background-color: #fff; }
     .radio:checked + label:before,
     .checkbox:checked + label:before {
       border: 1px solid #000; }

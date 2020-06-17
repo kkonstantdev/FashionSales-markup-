@@ -125,6 +125,10 @@ h2 {
   background-color: $color-yellow;
 }
 
+.color-orange {
+  background-color: $color-orange;
+}
+
 .hidden-tablet {
   @media (min-width: 768px) {
       display: none !important;
@@ -406,6 +410,7 @@ h2 {
   & + label {
     position: relative;
     padding: 0 0 10px 22px;
+    background-color: #fff;
     font-size: 18px;
     line-height: 1;
     font-family: $font-light;
@@ -459,6 +464,7 @@ h2 {
   &:checked + label {
     font-family: $font-main;
     color: #000;
+    background-color: #fff;
 
     &:before {
       border: 1px solid #000;
