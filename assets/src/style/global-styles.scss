@@ -99,12 +99,12 @@ h2 {
   padding: 20px 0 50px;
 
   @media (min-width: 768px) {
-    margin-top: 130px;
-    padding: 30px 0;
+    margin-top: 100px;
+    padding: 20px 0;
   }
 
   @media (min-width: 1200px) {
-    margin-top: 140px;
+    margin-top: 114px;
   }
 }
 
@@ -183,15 +183,15 @@ h2 {
   z-index: 20;
 
   @media (min-width: 768px) {
-    top: 74px;
+    top: 57px;
     bottom: auto;
-    padding: 10px 0;
+    padding: 7px 0 6px;
     overflow-x: visible;
   }
 
   @media (min-width: 1200px) {
-    top: 87px;
-    padding: 10px 5px;
+    top: 71px;
+    padding: 7px 5px 6px;
   }
 
   &-box {
@@ -226,6 +226,7 @@ h2 {
     @media (min-width: 768px) {
       color: $color-gray; 
       margin: 0 10px 0 0;
+      padding: 3px 20px 5px 10px;
       border-radius: $radius;
     }
 

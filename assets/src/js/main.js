@@ -1,10 +1,16 @@
 $(document).ready(function() {
-	$('.ac-parent').on('click',function() {
-		$(this).parents('.acordeon-box').toggleClass('active');
+	$('sidebar .ac-parent').on('click',function() {
+		$('sidebar .ac-parent').not($(this)).removeClass('active');
+		$(this).toggleClass('active');
+		$('sidebar .ac-child').not($(this).next()).slideUp(400);
+	  	$(this).next().slideToggle(50);
 	});
 
-	$('.ac-parent--sub').on('click',function() {
-		$(this).parents('.sidebar-list--sub-parent').toggleClass('active');
+	$('sidebar .ac-parent--sub').on('click',function() {
+		$('sidebar .ac-parent--sub').not($(this)).removeClass('active');
+		$(this).toggleClass('active');
+		$('sidebar .ac-child--sub').not($(this).next()).slideUp(400);
+	  	$(this).next().slideToggle(50);
 	});
 
 	$('#filter-parent-mobile').on('click',function() {
@@ -22,5 +28,13 @@ $(document).ready(function() {
 	$('.product-star .location-link').on('click',function() {
 		$(this).toggleClass('js--active');
 	});
+
+	$('.product-title span').each(function(i){
+		var heightChild = $(this).height();
+		if ( $(this).height() > $(this).closest('.product-title').height()){
+			$(this).closest('.product-title').css('justify-content','flex-start');
+		} 
+	});
+
 });
 

@@ -11,9 +11,9 @@
 
 	@media (min-width: 768px) {
 		position: sticky;
-  		top: 170px;
+  		top: 134px;
         display: block;
-        height: calc(100vh - 220px);
+        height: 100vh;
         width: 200px;
         overflow: visible;
         padding: 0;
@@ -22,8 +22,14 @@
 
     &-wrap {
     	position: relative;
-    	height: calc( 100% - 30px);
     	margin-bottom: 10px;
+    	height: calc(100% - 30px);
+    	overflow-y: auto;
+
+    	@media (min-width: 768px) {
+			height: auto;
+			overflow: visible;
+	    }
     }
 
     &-box {
@@ -80,24 +86,19 @@
 				   display: inline-block;
 				   padding: 3px;
 			}
+
+			&.active {
+				&:before {
+					right: 15px;
+					transform: rotate(-135deg) translateY(-50%);
+				}
+			}
 		}
 
 		.ac-child {
-			height: 0px;
-			overflow: hidden;
+			display: none;
 			transition: .2s;
 		}
-
-		&.active {
-			.ac-parent:before {
-				right: 15px;
-				transform: rotate(-135deg) translateY(-50%);
-			}
-			.ac-child {
-				height: 100%;
-			}
-		}
-	 	
 	}
 
 	.sidebar-list--sub-parent {
@@ -120,24 +121,19 @@
 				display: inline-block;
 				padding: 3px;
 			}
+
+			&.active {
+				&:before {
+					right: -25px;
+					transform: rotate(-135deg) translateY(-50%);
+				}
+			}
 		}
 
 		.sidebar-list--sub.ac-child--sub {
-			height: 0px;
-			overflow: hidden;
+			display: none;
 			transition: .2s;
 		}
-
-		&.active {
-			.ac-parent--sub:before {
-				right: -25px;
-				transform: rotate(-135deg) translateY(-50%);
-			}
-			.ac-child--sub {
-				height: 100%;
-			}
-		}
-	 	
 	}
 
 	.search {
@@ -231,7 +227,19 @@
 		width: 54%;
 
 		@media (min-width: 576px) {
-			width: 63%;
+			width: 58%;
+		}
+
+		@media (min-width: 768px) {
+			width: 56%;
+		}
+
+		@media (min-width: 992px) {
+			width: 59%;
+		}
+
+		@media (min-width: 1200px) {
+			width: 58%;
 		}
 
 		.discount {
@@ -245,8 +253,8 @@
 		    z-index: 2;
 
 		    @media (min-width: 1200px) {
-				padding: 5px 12px;
-			    font-size: o.8vw;
+				padding: 4px 10px;
+			    font-size: 10px;
 			}      
 		}
 	}
@@ -266,6 +274,10 @@
 		}
 
 		@media (min-width: 768px) {
+			width: 85%;
+		}
+
+		@media (min-width: 992px) {
 			width: 76%;
 		}
 
@@ -279,6 +291,10 @@
 		    justify-content: space-between;
 		    align-items: center;
 		    width: 73%;
+
+			@media (min-width: 768px) {
+				width: 65%;
+			}
 
 			@media (min-width: 992px) {
 				width: 60%;
@@ -306,7 +322,19 @@
     	height: 100%;
 		width: 40%;
 
+		@media (min-width: 576px) {
+			width: 30%;
+		}
+
+		@media (min-width: 992px) {
+			width: 60%;
+		}
+
 		@media (min-width: 1200px) {
+			width: 42%;
+		}
+
+		@media (min-width: 1440px) {
 			width: 50%;
 		}
 	}
@@ -318,22 +346,26 @@
 		font-family: $font-bold;
 		font-size: 4vw;
 		text-transform: uppercase;
-		min-height: 46px;
+		max-height: 12vw;
    		overflow: hidden;
 
 		@media (min-width: 576px) {
 			font-size: 3vw;
+			max-height: 8vw
 		}
 
 		@media (min-width: 768px) {
-			font-size: 1.5vw;
+			font-size: 1.6vw;
+			max-height: 4vw
 		}
 
 		@media (min-width: 1200px) {
+			height: 40px;
 			font-size: 1.15vw;
 		}
 
 		@media (min-width: 1440px) {
+			height: 46px;
 			font-size: 17px;
 		}
 
@@ -442,7 +474,7 @@
 			@media (min-width: 1200px) {
 				height: 30px;
 				line-height: 28px;
-				font-size: 10px;
+				font-size: 0.8vw;
 			}
 
 			@media (min-width: 1440px) {
@@ -543,26 +575,57 @@
 }
 
 // ========== Whishlist page ========
-.wishlist-page {
-	.main {
-		margin-top: 66px;
+.wishlist {
+	&-page {
+		.main {
+			margin-top: 66px;
+			padding: 20px 0 0;
 
-		@media (min-width: 768px) {
-		    margin-top: 130px;
+			@media (min-width: 768px) {
+			    margin-top: 100px;
+			    padding: 20px 0;
+			}
+
+			@media (min-width: 1200px) {
+			    margin-top: 114px;
+			}
 		}
 
-		@media (min-width: 1200px) {
-		    margin-top: 140px;
+		.filter {
+			display: none;
+
+			@media (min-width: 768px) {
+			    display: block;
+			}
 		}
 	}
 
-	.filter {
-		display: none;
+	&-head {
+		margin-top: 8px;
+    	margin-bottom: 20px;
 
-		@media (min-width: 768px) {
-		    display: block;
+		.title-h {
+			font-family: $font-bold;
+			color: #000;
+			line-height: 1;
+			font-size: 18px;
+			text-transform: uppercase;
+
+			@media (min-width: 1440px) {
+			    font-size: 21px;
+			}
 		}
-	}
+
+		.count-items {
+			color: $color-gray-dark;
+			font-family: $font-light;
+			font-size: 15px;
+
+			@media (min-width: 1440px) {
+			    font-size: 18px;
+			}
+		}
+	} 
 }
 
 
