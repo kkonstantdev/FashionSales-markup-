@@ -873,10 +873,7 @@ h2 {
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 42%; }
-    @media (min-width: 768px) {
-      .product-preview {
-        width: 40%; } }
+    width: 40%; }
     @media (min-width: 1200px) {
       .product-preview {
         width: 50%; } }
@@ -989,8 +986,8 @@ h2 {
       .product .location-link .icon {
         display: inline-block;
         vertical-align: middle;
-        width: 3.4vw;
-        height: 3.7vw;
+        width: 2.7vw;
+        height: 3.3vw;
         margin-left: 3px; }
         @media (min-width: 576px) {
           .product .location-link .icon {
