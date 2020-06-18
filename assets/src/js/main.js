@@ -2,15 +2,15 @@ $(document).ready(function() {
 	$('sidebar .ac-parent').on('click',function() {
 		$('sidebar .ac-parent').not($(this)).removeClass('active');
 		$(this).toggleClass('active');
-		$('sidebar .ac-child').not($(this).next()).slideUp(400);
-	  	$(this).next().slideToggle(50);
+		$('sidebar .ac-child').not($(this).next()).slideUp(10);
+	  	$(this).next().slideToggle(10);
 	});
 
 	$('sidebar .ac-parent--sub').on('click',function() {
 		$('sidebar .ac-parent--sub').not($(this)).removeClass('active');
 		$(this).toggleClass('active');
-		$('sidebar .ac-child--sub').not($(this).next()).slideUp(400);
-	  	$(this).next().slideToggle(50);
+		$('sidebar .ac-child--sub').not($(this).next()).slideUp(10);
+	  	$(this).next().slideToggle(10);
 	});
 
 	$('#filter-parent-mobile').on('click',function() {

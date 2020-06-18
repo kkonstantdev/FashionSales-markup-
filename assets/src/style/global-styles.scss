@@ -228,6 +228,7 @@ h2 {
     border: $border;
     border-radius: 4px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 
     @media (min-width: 768px) {
       color: $color-gray; 
