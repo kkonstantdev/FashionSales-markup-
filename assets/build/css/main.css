@@ -257,7 +257,7 @@ h2 {
   .filter__item {
     position: relative;
     margin: 0 10px 0 0;
-    padding: 6px 20px 8px 10px;
+    padding: 6px 10px 8px 10px;
     color: #c7c7c7;
     border: 1px solid #c7c7c7;
     border-radius: 4px;
@@ -266,7 +266,7 @@ h2 {
       .filter__item {
         color: #868686;
         margin: 0 10px 0 0;
-        padding: 3px 20px 5px 10px;
+        padding: 3px 10px 5px 10px;
         border-radius: 6px; } }
     .filter__item.active {
       color: #676767; }
@@ -290,13 +290,21 @@ h2 {
       .filter-title {
         font-size: 16px; } }
   .filter .icon {
-    position: absolute;
-    right: 7px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 8px;
+    position: relative;
     height: 8px;
+    width: 8px;
+    margin: 3px 0 0 8px;
     display: none; }
+    @media (min-width: 768px) {
+      .filter .icon {
+        height: 0.9vw;
+        width: 0.9vw;
+        margin: 2px 0 0 8px; } }
+    @media (min-width: 992px) {
+      .filter .icon {
+        height: 8px;
+        width: 8px;
+        margin: 3px 0 0 5px; } }
     .filter .icon img {
       display: block; }
   .filter .filter__item--parent {
@@ -322,8 +330,8 @@ h2 {
       position: static;
       display: inline-block;
       width: 12px;
-      height: 9px;
-      margin: 0 8px 0 0;
+      height: 7px;
+      margin: 4px 8px 0 0;
       transform: none; }
       .filter .filter__item--parent .icon .line {
         width: 12px;
@@ -890,7 +898,8 @@ h2 {
       display: flex;
       align-items: flex-end; }
     .product-desc__content {
-      width: 70%; }
+      width: 70%;
+      margin: 0 auto; }
   .product-preview {
     display: flex;
     justify-content: center;
