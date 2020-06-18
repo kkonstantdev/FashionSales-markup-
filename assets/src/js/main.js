@@ -32,7 +32,7 @@ $(document).ready(function() {
 	$('.product-title span').each(function(i){
 		var heightChild = $(this).height();
 		if ( $(this).height() > $(this).closest('.product-title').height()){
-			$(this).closest('.product-title').css('justify-content','flex-start');
+			$(this).closest('.product-title').addClass('j-content-start ');
 		} 
 	});
 
