@@ -850,15 +850,14 @@ h2 {
       position: absolute;
       top: -7px;
       left: -7px;
-      padding: 3px 8px;
+      padding: 2px 7px;
       color: #fff;
       font-size: 12px;
       border-radius: 8px;
       z-index: 2; }
       @media (min-width: 1200px) {
         .product-img .discount {
-          padding: 4px 10px;
-          font-size: 10px; } }
+          font-size: 13px; } }
   .product-desc {
     position: absolute;
     bottom: -3px;
