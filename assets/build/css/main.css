@@ -962,6 +962,12 @@ h2 {
     @media (min-width: 1440px) {
       .product-filter {
         font-size: 16px; } }
+  .product-info {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; }
   .product .price {
     margin-bottom: 7%; }
     .product .price__item {
@@ -969,7 +975,7 @@ h2 {
       font-family: "HelveticaNeue-Bold", Arial, sans-serif; }
       @media (min-width: 576px) {
         .product .price__item {
-          font-size: 2.8vw; } }
+          font-size: 2.6vw; } }
       @media (min-width: 768px) {
         .product .price__item {
           font-size: 1.9vw; } }
@@ -1057,7 +1063,8 @@ h2 {
   .product-star {
     border: 1px solid #c7c7c7;
     border-radius: 6px;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    background-color: #fff; }
     .product-star .location-link {
       display: flex;
       align-items: center;
