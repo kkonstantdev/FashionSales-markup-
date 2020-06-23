@@ -378,6 +378,10 @@
 			justify-content: flex-start;
 		}
 
+		span {
+			word-break: break-word;
+		}
+
 	}
 
 	&-filter {
@@ -385,6 +389,7 @@
 		font-size: 4vw;
 		color: $color-gray-dark;
 		font-family: $font-light;
+		text-transform: lowercase;
 
 		@media (min-width: 576px) {
 			font-size: 2.3vw;
