@@ -900,6 +900,8 @@ h2 {
     .product-desc__content {
       width: 70%;
       margin: 0 auto; }
+      .product-desc__content-wrap {
+        width: 100%; }
   .product-preview {
     display: flex;
     justify-content: center;
