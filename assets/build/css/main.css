@@ -775,9 +775,10 @@ h2 {
       display: none;
       transition: .2s; }
   .sidebar .search {
-    width: 190px;
+    width: 180px;
     margin-bottom: 13px; }
     .sidebar .search-box {
+      width: 180px;
       max-height: 155px;
       margin-right: 5px; }
     .sidebar .search input[type=search] {
@@ -791,7 +792,7 @@ h2 {
     line-height: 35px; }
     @media (min-width: 768px) {
       .sidebar .btn {
-        width: 190px; } }
+        width: 180px; } }
     .sidebar .btn-wrap {
       position: fixed;
       width: calc(100% - 30px);
@@ -827,10 +828,12 @@ h2 {
       .product__item {
         width: 48%;
         margin: 0 0 3% 2%; } }
+    @media (min-width: 768px) {
+      .product__item {
+        margin-bottom: 4%; } }
     @media (min-width: 1200px) {
       .product__item {
-        width: 31.3%;
-        margin-bottom: 2%; } }
+        width: 31.3%; } }
   .product-img {
     position: relative;
     width: 54%; }
@@ -1022,8 +1025,7 @@ h2 {
       font-family: "HelveticaNeue", Arial, sans-serif;
       color: #696969;
       line-height: 27px;
-      text-transform: uppercase;
-      transition: .2s; }
+      text-transform: uppercase; }
       @media (min-width: 576px) {
         .product .location-link {
           font-size: 1.6vw; } }
@@ -1040,7 +1042,12 @@ h2 {
           line-height: 30px;
           font-size: 13px; } }
       .product .location-link:hover {
+        color: #fff;
         background-color: #c7c7c7; }
+      .product .location-link:hover .icon-img {
+        display: none; }
+        .product .location-link:hover .icon-img-hover {
+          display: block; }
       .product .location-link .icon {
         display: inline-block;
         vertical-align: middle;
@@ -1063,8 +1070,10 @@ h2 {
           .product .location-link .icon {
             width: 12px;
             height: 14px; } }
-        .product .location-link .icon img {
+        .product .location-link .icon-img {
           display: block; }
+          .product .location-link .icon-img-hover {
+            display: none; }
   .product-star {
     border: 1px solid #c7c7c7;
     border-radius: 6px;
