@@ -1086,7 +1086,8 @@ h2 {
       border: none;
       height: 26px;
       width: 26px;
-      margin-right: 0; }
+      margin-right: 0;
+      line-height: 1; }
       @media (min-width: 1200px) {
         .product-star .location-link {
           width: 28px;
