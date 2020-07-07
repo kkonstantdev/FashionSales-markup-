@@ -141,12 +141,6 @@
 		width: 180px;
 		margin-bottom: 13px;
 
-		&-box {
-			width: 180px;
-			max-height: 155px;
-			margin-right: 5px;
-		}
-
 		input[type=search] {
 			height: 30px;
 			padding-bottom: 0;
@@ -291,7 +285,7 @@
 		&__left {
 			display: flex;
 		    flex-direction: column;
-		    justify-content: space-between;
+		    justify-content: flex-end;
 		    align-items: center;
 		    width: 73%;
 

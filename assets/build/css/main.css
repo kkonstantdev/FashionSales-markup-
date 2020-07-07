@@ -509,6 +509,9 @@ h2 {
     right: 9px; }
 
 .scroll-block {
+  width: 180px;
+  max-height: 155px;
+  margin-right: 5px;
   overflow-y: scroll; }
 
 .scroll-block::-webkit-scrollbar-track {
@@ -662,6 +665,8 @@ h2 {
     @media (min-width: 576px) {
       .wishlist-page .header__wishlist-title {
         font-size: 3vw; } }
+  .wishlist-page .header__wishlist .count-items {
+    color: #7b7b7b; }
   .wishlist-page .header__wishlist .close-icon {
     position: absolute;
     top: 50%;
@@ -777,10 +782,6 @@ h2 {
   .sidebar .search {
     width: 180px;
     margin-bottom: 13px; }
-    .sidebar .search-box {
-      width: 180px;
-      max-height: 155px;
-      margin-right: 5px; }
     .sidebar .search input[type=search] {
       height: 30px;
       padding-bottom: 0;
@@ -885,7 +886,7 @@ h2 {
     .product-desc__left {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
       width: 73%; }
       @media (min-width: 768px) {
