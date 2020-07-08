@@ -32,6 +32,14 @@
 	    }
     }
 
+    &-content {
+    	max-height: calc(100vh - 170px);
+
+    	@media (min-width: 768px) {
+			max-height: calc(100vh - 205px);
+	    }
+    }
+
     &-box {
     	padding: 0 0 0 15px;
 
@@ -137,11 +145,19 @@
 		}
 	}
 
+	.sidebar-list--sub__wrap,
+	.search-box {
+		width: 180px;
+		max-height: 155px;
+		margin-right: 5px;
+	}
+
+
 	.search {
 		width: 180px;
 		margin-bottom: 13px;
 
-		input[type=search] {
+		input[type="text"] {
 			height: 30px;
 			padding-bottom: 0;
 			font-size: 17px;

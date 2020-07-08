@@ -370,7 +370,7 @@ h2 {
     margin-right: 35px;
   }
 
-  input[type="search"] {
+  input[type="text"] {
     height: 22px;
     padding: 0 32px 2px 7px;
     border: none;
@@ -542,9 +542,6 @@ h2 {
 }
 
 .scroll-block {
-  width: 180px;
-  max-height: 155px;
-  margin-right: 5px;
   overflow-y: scroll;
 }
 .scroll-block::-webkit-scrollbar-track {border-radius: 4px;}
