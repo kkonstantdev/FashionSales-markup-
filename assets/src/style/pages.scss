@@ -256,6 +256,17 @@
 			width: 58%;
 		}
 
+		&-item {
+			visibility: hidden; 
+			opacity: 0;
+			transition: 0.4s;
+
+			&.load {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+
 		.discount {
 			position: absolute;
 			top: -7px;

@@ -857,6 +857,13 @@ h2 {
     @media (min-width: 1200px) {
       .product-img {
         width: 58%; } }
+    .product-img-item {
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.4s; }
+      .product-img-item.load {
+        visibility: visible;
+        opacity: 1; }
     .product-img .discount {
       position: absolute;
       top: -7px;

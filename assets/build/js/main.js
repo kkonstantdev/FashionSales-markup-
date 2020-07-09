@@ -36,4 +36,34 @@ $(document).ready(function() {
 		} 
 	});
 
+	$(window).on("load", function() {
+	    $('.product-img-item').addClass('load');
+	});
+
+	// var total = $('.product-img-item').length;
+	// var counter = 0;
+	// $('.product-img-item').load(function() {
+ // 		if (++counter >= total) {
+	//     show();
+	//   }
+	// });
+	// $('.product-img-item').load(function() {
+ // 		if (++counter >= total) {
+	//     show();
+	//     alert('lll');
+	//   }
+	// });
+	// function loaded() {
+	//   if (++counter >= total) {
+	//     show();
+	//   }
+	//   for (var counter = 0; counter >= total; counter++) {
+	//   	// show();
+	//   	$('.product-img-item').css({'visibility' : 'visible', 'transition' : '0.3s', 'opacity' : '1'});
+	//   }
+	// }
+	// function show() {
+	//   $('.product-img-item').css({'visibility' : 'visible', 'transition' : '0.3s', 'opacity' : '1'});
+	// }
+
 });
