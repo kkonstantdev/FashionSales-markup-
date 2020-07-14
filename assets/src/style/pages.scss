@@ -411,7 +411,7 @@
 	&-filter {
 		margin: 0 auto 4%;
 		font-size: 4vw;
-		color: $color-gray-dark;
+		color: #000;
 		font-family: $font-light;
 		text-transform: lowercase;
 
@@ -500,11 +500,11 @@
 			height: 28px;
 			margin-right: 10px;
 			background-color: #fff;
-			border: $border;
+			border: 1px solid #000;
 			border-radius: $radius;
 			font-size: 3.4vw;
 			font-family: $font-main;
-			color: #696969;
+			color: #000;
 			line-height: 27px;
 			text-transform: uppercase;
 
@@ -529,7 +529,7 @@
 
 			&:hover {
 				color: #fff;
-				background-color: #c7c7c7;
+				background-color: #000;
 			}
 
 			&:hover {
@@ -581,7 +581,7 @@
 	}
 
 	&-star {
-		border: 1px solid #c7c7c7;
+		border: 1px solid #000;
     	border-radius: 6px;
     	box-sizing: border-box;
     	background-color: #fff;
